@@ -1,16 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: 'Rubik';
+	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+
+	border: solid red 1px;
+}
+
+:root {
+	--primary-black: #000000;
+	--primary-white: #ffffff;
+	--primary-padding: 1rem;
+}
+
+/* THIS IS FOR THE NAVBAR */
+
+.Navbar {
+	padding: var(--primary-padding);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 7vh;
+	min-width: 100vw;
+	box-shadow: 0 0 4px var(--primary-black);
+}
+
+.Navbar-title {
+	font-family: 'Rubik';
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+
+.Navbar-link {
+	font-family: 'Karla';
+	font-weight: 200;
+	cursor: pointer;
+	text-align: center;
+	margin: 0;
+}
+
+/* THIS IS FOR THE MAIN PAGE */
+.main-page-container {
+	min-width: 100vw;
+	min-height: 84vh;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (min-width: 600px) {
+	.main-page-container {
+		flex-direction: row;
+	}
+}
+
+.main-page-left-side-container {
+	min-height: 42vh;
+	display: grid;
+	place-items: center;
+}
+
+.main-page-right-side-container {
+	min-height: 42vh;
 }
