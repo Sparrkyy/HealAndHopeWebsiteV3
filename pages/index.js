@@ -20,6 +20,33 @@ export default function Home() {
 						<div className='main-right-side-long-text'>
 							Giving children a second chance at life
 						</div>
+						<div className='main-right-light-text'>
+							sheding light on overlooked cases of children that have been
+							injured, wounded, or deformed as a result of warfare or conflict,
+							with the purpose of providing essential reconstructive surgery and
+							hope for a second chance at life.
+						</div>
+						<button className='main-right-donate-button'>Donate here</button>
+					</div>
+				</div>
+				<div className='main-cards-container'>
+					<div className='main-card'>
+						<h3 className='main-card-title'>Fundraising Goal:</h3>
+						<div className='main-card-body'>
+							<h4 className='main-card-display-number'>10,000$</h4>
+						</div>
+					</div>
+					<div className='main-card'>
+						<h3 className='main-card-title'>Funds raised so far:</h3>
+						<div className='main-card-body'>
+							<h4 className='main-card-display-number'>5,000$</h4>
+						</div>
+					</div>
+					<div className='main-card'>
+						<h3 className='main-card-title'>Surgeries funded: </h3>
+						<div className='main-card-body'>
+							<h4 className='main-card-display-number'>43</h4>
+						</div>
 					</div>
 				</div>
 				{/* <Image src='/Logo.png' alt='Heal and hope logo' layout='fill'></Image> */}

@@ -6,6 +6,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Rubik';
+	background-color: var(--primary-white);
 	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
 }
@@ -17,13 +18,21 @@ a {
 
 * {
 	box-sizing: border-box;
+}
 
-	border: solid red 1px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--primary-black);
+	margin: 0;
 }
 
 :root {
-	--primary-black: #000000;
-	--primary-white: #ffffff;
+	--primary-black: #003300;
+	--primary-white: white;
+	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
 }
 
@@ -37,14 +46,23 @@ a {
 	min-height: 7vh;
 	min-width: 100vw;
 	box-shadow: 0 0 4px var(--primary-black);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: var(--primary-white);
 }
 
 .Navbar-title {
 	font-family: 'Rubik';
 	font-weight: 800;
 	font-size: 1.5rem;
+	color: var(--primary-black);
 }
-
+.Navbar-links {
+	display: flex;
+	justify-content: space-around;
+	min-width: 30vw;
+}
 .Navbar-link {
 	font-family: 'Karla';
 	font-weight: 200;
@@ -52,21 +70,40 @@ a {
 	text-align: center;
 	margin: 0;
 }
-
-/* THIS IS FOR THE MAIN PAGE */
-.main-page-container {
-	min-width: 100vw;
-	min-height: 84vh;
-	display: flex;
-	flex-direction: column;
+.Navbar-link:hover {
+	animation: 0.5s hoverLink forwards;
+	color: var(--primary-sky-blue);
 }
 
-@media (min-width: 600px) {
-	.main-page-container {
-		flex-direction: row;
+@keyframes hoverLink {
+	0% {
+	}
+	100% {
+		font-weight: 800;
+		font-family: 'Rubik';
 	}
 }
 
+/*
+##############################################
+THIS IS FOR THE MAIN PAGE AND ITS PARTS
+############################################## 
+ */
+.main-page-container {
+	min-width: 100vw;
+	min-height: 70vh;
+	display: flex;
+}
+
+.main-page-container {
+	flex-direction: row-reverse;
+}
+.main-page-left-side-container {
+	min-width: 48vw;
+}
+.main-page-right-side-container {
+	min-width: 48vw;
+}
 .main-page-left-side-container {
 	min-height: 42vh;
 	display: grid;
@@ -75,4 +112,79 @@ a {
 
 .main-page-right-side-container {
 	min-height: 42vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--primary-padding);
+	padding-left: 3rem;
+}
+
+.main-right-side-long-text {
+	font-family: 'Rubik';
+	font-weight: 800;
+	color: var(--primary-black);
+	font-size: 2rem;
+	width: 20ch;
+}
+
+.main-right-light-text {
+	width: 51ch;
+	font-family: 'Karla';
+	font-weight: 200;
+	margin-top: var(--primary-padding);
+}
+
+.main-right-donate-button {
+	padding: var(--primary-padding);
+	color: var(--primary-black);
+	border: 2px solid var(--primary-black);
+	background-color: var(--primary-white);
+	margin-top: var(--primary-padding);
+	max-width: 7rem;
+	font-family: 'Karla';
+	font-weight: 400;
+}
+
+.main-right-donate-button:hover {
+	color: var(--primary-white);
+	background-color: var(--primary-sky-blue);
+	border: 2px solid var(--primary-white);
+	cursor: pointer;
+}
+
+/*
+##############################################
+THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
+############################################## 
+ */
+
+.main-cards-container {
+	min-height: 40vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: var(--primary-padding);
+}
+
+.main-card {
+	min-width: 25vw;
+	min-height: 25vh;
+	border: solid 1px var(--primary-black);
+	box-shadow: 1px 1px 1px var(--primary-black);
+	padding: var(--primary-padding);
+}
+
+.main-card-title {
+	width: 15ch;
+}
+
+.main-card-body {
+	height: 15vh;
+	display: grid;
+	place-items: center;
+}
+
+.main-card-display-number {
+	text-align: center;
+	font-size: 3rem;
 }
