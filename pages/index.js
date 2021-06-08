@@ -12,43 +12,92 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<div className='main-page-container'>
-					<div className='main-page-left-side-container'>
-						<img src='/Logo.png' alt='healandhope logo' width='80%'></img>
+				<div className='main-whole-page-container'>
+					<div className='main-page-container'>
+						<div className='main-page-left-side-container'>
+							<img src='/Logo.png' alt='healandhope logo' width='80%'></img>
+						</div>
+						<div className='main-page-right-side-container'>
+							<div className='main-right-side-long-text'>
+								Giving children a second chance at life
+							</div>
+							<div className='main-right-light-text'>
+								sheding light on overlooked cases of children that have been
+								injured, wounded, or deformed as a result of warfare or
+								conflict, with the purpose of providing essential reconstructive
+								surgery and hope for a second chance at life.
+							</div>
+							<button className='main-right-donate-button'>Donate here</button>
+						</div>
 					</div>
-					<div className='main-page-right-side-container'>
-						<div className='main-right-side-long-text'>
-							Giving children a second chance at life
+					<div className='main-cards-container'>
+						<div className='main-card'>
+							<h3 className='main-card-title'>Fundraising Goal:</h3>
+							<div className='main-card-body'>
+								<h4 className='main-card-display-number'>10,000$</h4>
+							</div>
+							<div className='main-card-image-container'>
+								<img
+									src='/fundraising.png'
+									alt='fundraising hands'
+									width='20%'
+								></img>
+							</div>
 						</div>
-						<div className='main-right-light-text'>
-							sheding light on overlooked cases of children that have been
-							injured, wounded, or deformed as a result of warfare or conflict,
-							with the purpose of providing essential reconstructive surgery and
-							hope for a second chance at life.
+						<div className='main-card'>
+							<h3 className='main-card-title'>Funds raised so far:</h3>
+							<div className='main-card-body'>
+								<h4 className='main-card-display-number'>5,000$</h4>
+							</div>
+							<div className='main-card-image-container'>
+								<img
+									src='/fundraisingHeart.png'
+									alt='fundraising heart'
+									width='20%'
+								></img>
+							</div>
 						</div>
-						<button className='main-right-donate-button'>Donate here</button>
+						<div className='main-card'>
+							<h3 className='main-card-title'>Surgeries funded: </h3>
+							<div className='main-card-body'>
+								<h4 className='main-card-display-number'>43</h4>
+							</div>
+							<div className='main-card-image-container'>
+								<img
+									src='/doctor.png'
+									alt='fundraising heart'
+									width='20%'
+								></img>
+							</div>
+						</div>
+					</div>
+					<div className='main-page-partnership-container'>
+						<div className='main-page-partnership-left-side-container'>
+							<img
+								src='/cowfLogo2.png'
+								alt='healandhope logo'
+								width='80%'
+							></img>
+						</div>
+						<div className='main-page-partnership-right-side-container'>
+							<div className='main-right-partnership-side-long-text'>
+								Our partner: The Children Of War Fondation
+							</div>
+							<div className='main-right-partnership-light-text'>
+								COWF has evolved from saving one life at a time to now being on
+								the forefront of systematic change with life enabling healthcare
+								and education, all in an effort to heal communities through
+								capacity building. COWF continues to build and draw a global
+								presence through its remote networks & partners, engaging with
+								health care professionals, innovators, educators, scientists,
+								private, public, governmental, academic, and institutional
+								entities, from across the globe.
+							</div>
+							<button className='main-right-donate-button'>Learn More</button>
+						</div>
 					</div>
 				</div>
-				<div className='main-cards-container'>
-					<div className='main-card'>
-						<h3 className='main-card-title'>Fundraising Goal:</h3>
-						<div className='main-card-body'>
-							<h4 className='main-card-display-number'>10,000$</h4>
-						</div>
-					</div>
-					<div className='main-card'>
-						<h3 className='main-card-title'>Funds raised so far:</h3>
-						<div className='main-card-body'>
-							<h4 className='main-card-display-number'>5,000$</h4>
-						</div>
-					</div>
-					<div className='main-card'>
-						<h3 className='main-card-title'>Surgeries funded: </h3>
-						<div className='main-card-body'>
-							<h4 className='main-card-display-number'>43</h4>
-						</div>
-					</div>
-				</div>
+
 				{/* <Image src='/Logo.png' alt='Heal and hope logo' layout='fill'></Image> */}
 			</main>
 		</div>

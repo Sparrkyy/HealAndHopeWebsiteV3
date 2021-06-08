@@ -20,6 +20,12 @@ a {
 	box-sizing: border-box;
 }
 
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 h1,
 h2,
 h3,
@@ -34,6 +40,8 @@ h5 {
 	--primary-white: white;
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
+	--large-font-size: 2.3rem;
+	--small-font-size: 1rem;
 }
 
 /* THIS IS FOR THE NAVBAR */
@@ -55,7 +63,7 @@ h5 {
 .Navbar-title {
 	font-family: 'Rubik';
 	font-weight: 800;
-	font-size: 1.5rem;
+	font-size: var(--large-font-size);
 	color: var(--primary-black);
 }
 .Navbar-links {
@@ -66,6 +74,7 @@ h5 {
 .Navbar-link {
 	font-family: 'Karla';
 	font-weight: 200;
+	font-size: var(--small-font-size);
 	cursor: pointer;
 	text-align: center;
 	margin: 0;
@@ -89,20 +98,24 @@ h5 {
 THIS IS FOR THE MAIN PAGE AND ITS PARTS
 ############################################## 
  */
+.main-whole-page-container {
+	max-width: 1280px;
+}
 .main-page-container {
-	min-width: 100vw;
-	min-height: 70vh;
+	min-width: 100%;
+	min-height: 50vh;
 	display: flex;
+	padding-top: 12vh;
 }
 
 .main-page-container {
 	flex-direction: row-reverse;
 }
 .main-page-left-side-container {
-	min-width: 48vw;
+	min-width: 50%;
 }
 .main-page-right-side-container {
-	min-width: 48vw;
+	min-width: 50%;
 }
 .main-page-left-side-container {
 	min-height: 42vh;
@@ -116,14 +129,14 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	flex-direction: column;
 	justify-content: center;
 	padding: var(--primary-padding);
-	padding-left: 3rem;
+	padding-left: 4rem;
 }
 
 .main-right-side-long-text {
 	font-family: 'Rubik';
 	font-weight: 800;
 	color: var(--primary-black);
-	font-size: 2rem;
+	font-size: var(--large-font-size);
 	width: 20ch;
 }
 
@@ -131,6 +144,7 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	width: 51ch;
 	font-family: 'Karla';
 	font-weight: 200;
+	font-size: var(--small-font-size);
 	margin-top: var(--primary-padding);
 }
 
@@ -140,9 +154,10 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	border: 2px solid var(--primary-black);
 	background-color: var(--primary-white);
 	margin-top: var(--primary-padding);
-	max-width: 7rem;
+	max-width: 8rem;
 	font-family: 'Karla';
 	font-weight: 400;
+	font-size: var(--small-font-size);
 }
 
 .main-right-donate-button:hover {
@@ -163,15 +178,16 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: var(--primary-padding);
+	padding: 5rem 0;
 }
 
 .main-card {
-	min-width: 25vw;
+	width: 30%;
 	min-height: 25vh;
 	border: solid 1px var(--primary-black);
 	box-shadow: 1px 1px 1px var(--primary-black);
 	padding: var(--primary-padding);
+	border-radius: var(--primary-padding);
 }
 
 .main-card-title {
@@ -179,12 +195,68 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 }
 
 .main-card-body {
-	height: 15vh;
-	display: grid;
-	place-items: center;
+	height: 10vh;
+	display: flex;
+	justify-content: center;
 }
 
 .main-card-display-number {
 	text-align: center;
 	font-size: 3rem;
+}
+
+.main-card-image-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+/*
+##############################################
+THIS IS FOR THE PARTNERSHIP MESSAGE UNDERNEITH
+############################################## 
+ */
+
+.main-page-partnership-container {
+	min-width: 100%;
+	min-height: 50vh;
+	display: flex;
+	padding-bottom: 5vh;
+	flex-direction: row;
+}
+
+.main-page-partnership-left-side-container {
+	min-width: 50%;
+}
+.main-page-partnership-right-side-container {
+	min-width: 50%;
+}
+.main-page-partnership-left-side-container {
+	min-height: 42vh;
+	display: grid;
+	place-items: center;
+}
+
+.main-page-partnership-right-side-container {
+	min-height: 42vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: var(--primary-padding);
+}
+
+.main-right-partnership-side-long-text {
+	font-family: 'Rubik';
+	font-weight: 800;
+	color: var(--primary-black);
+	font-size: var(--large-font-size);
+	width: 20ch;
+}
+
+.main-right-partnership-light-text {
+	width: 51ch;
+	font-weight: var(--small-font-size);
+	font-family: 'Karla';
+	font-weight: 200;
+	margin-top: var(--primary-padding);
 }
