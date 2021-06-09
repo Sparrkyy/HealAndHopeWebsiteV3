@@ -40,6 +40,7 @@ h5 {
 	--primary-white: white;
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
+	--larger-padding: 0.8rem;
 	--large-font-size: 2.3rem;
 	--small-font-size: 1rem;
 }
@@ -78,18 +79,31 @@ h5 {
 	cursor: pointer;
 	text-align: center;
 	margin: 0;
+	animation: 0.5s hoverLinkReverse;
 }
 .Navbar-link:hover {
 	animation: 0.5s hoverLink forwards;
-	color: var(--primary-sky-blue);
 }
 
 @keyframes hoverLink {
-	0% {
+	from {
 	}
-	100% {
+	to {
 		font-weight: 800;
 		font-family: 'Rubik';
+		font-size: 1.2rem;
+		color: var(--primary-sky-blue);
+	}
+}
+
+@keyframes hoverLinkReverse {
+	from {
+		font-weight: 800;
+		font-family: 'Rubik';
+		font-size: 1.2rem;
+		color: var(--primary-sky-blue);
+	}
+	to {
 	}
 }
 
@@ -105,7 +119,7 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	min-width: 100%;
 	min-height: 50vh;
 	display: flex;
-	padding-top: 12vh;
+	padding-top: 18vh;
 }
 
 .main-page-container {
@@ -151,20 +165,41 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 .main-right-donate-button {
 	padding: var(--primary-padding);
 	color: var(--primary-black);
-	border: 2px solid var(--primary-black);
+	border: 1px solid var(--primary-black);
 	background-color: var(--primary-white);
 	margin-top: var(--primary-padding);
 	max-width: 8rem;
 	font-family: 'Karla';
 	font-weight: 400;
 	font-size: var(--small-font-size);
+	border-radius: var(--primary-padding);
+	box-shadow: 1px 1px 3px var(--primary-black);
+	animation: buttonGrow 0.5;
 }
 
 .main-right-donate-button:hover {
-	color: var(--primary-white);
-	background-color: var(--primary-sky-blue);
-	border: 2px solid var(--primary-white);
 	cursor: pointer;
+	animation: buttonGrowReverse 0.5s forwards;
+}
+
+@keyframes buttonGrow {
+	from {
+		color: var(--primary-white);
+		background-color: var(--primary-sky-blue);
+		border: 1px solid var(--primary-white);
+	}
+	to {
+	}
+}
+
+@keyframes buttonGrowReverse {
+	from {
+	}
+	to {
+		color: var(--primary-white);
+		background-color: var(--primary-sky-blue);
+		border: 1px solid var(--primary-white);
+	}
 }
 
 /*
@@ -185,7 +220,7 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	width: 30%;
 	min-height: 25vh;
 	border: solid 1px var(--primary-black);
-	box-shadow: 1px 1px 1px var(--primary-black);
+	box-shadow: 1px 1px 3px var(--primary-black);
 	padding: var(--primary-padding);
 	border-radius: var(--primary-padding);
 }

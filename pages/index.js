@@ -25,7 +25,7 @@ export default function Home() {
 								sheding light on overlooked cases of children that have been
 								injured, wounded, or deformed as a result of warfare or
 								conflict, with the purpose of providing essential reconstructive
-								surgery and hope for a second chance at life.
+								surgery.
 							</div>
 							<button className='main-right-donate-button'>Donate here</button>
 						</div>
