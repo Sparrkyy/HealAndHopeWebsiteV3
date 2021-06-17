@@ -36,16 +36,22 @@ h5 {
 }
 
 :root {
-	--primary-black: #003300;
+	--primary-black: #2c2c2c;
 	--primary-white: white;
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
 	--larger-padding: 0.8rem;
 	--large-font-size: 2.3rem;
 	--small-font-size: 1rem;
+	/* Doesn't actually work but for a quick reference */
+	--large-media-query: 920px;
 }
 
-/* THIS IS FOR THE NAVBAR */
+/*
+##############################################
+THIS IS FOR THE NAVBAR
+############################################## 
+ */
 
 .Navbar {
 	padding: var(--primary-padding);
@@ -67,11 +73,7 @@ h5 {
 	font-size: var(--large-font-size);
 	color: var(--primary-black);
 }
-.Navbar-links {
-	display: flex;
-	justify-content: space-around;
-	min-width: 30vw;
-}
+
 .Navbar-link {
 	font-family: 'Karla';
 	font-weight: 200;
@@ -107,6 +109,48 @@ h5 {
 	}
 }
 
+/* For responsive navbar */
+.Navbar-Menu-Dropdown-Button {
+	cursor: pointer;
+}
+
+.Navbar-Menu-Dropdown-Button:hover {
+	animation: 0.5s hoverLink forwards;
+}
+
+.Navbar-Menu-Dropdown-Container {
+	position: absolute;
+	width: 200px;
+	top: 44px;
+	transform: translateX(-90%);
+	background-color: var(--primary-white);
+	border: var(--primary-black) 1px solid;
+	padding: 1rem;
+	/*  */
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.Navbar-Menu-Dropdown-Super-Container {
+	display: none;
+}
+
+.Navbar-links {
+	display: flex;
+	justify-content: space-around;
+	min-width: 30vw;
+}
+
+@media (max-width: 920px) {
+	.Navbar-links {
+		display: none;
+	}
+	.Navbar-Menu-Dropdown-Super-Container {
+		display: block;
+	}
+}
+
 /*
 ##############################################
 THIS IS FOR THE MAIN PAGE AND ITS PARTS
@@ -125,12 +169,35 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 .main-page-container {
 	flex-direction: row-reverse;
 }
+
+@media (max-width: 920px) {
+	.main-page-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.main-cards-container {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	.main-page-right-side-container {
+		padding: 1rem !important;
+	}
+	.main-card {
+		width: 70% !important;
+		min-height: 25vh;
+	}
+	.main-page-partnership-container {
+		flex-direction: column !important;
+		align-items: center;
+	}
+	.main-right-side-long-text {
+	}
+}
 .main-page-left-side-container {
 	min-width: 50%;
+	max-width: 90%;
 }
-.main-page-right-side-container {
-	min-width: 50%;
-}
+
 .main-page-left-side-container {
 	min-height: 42vh;
 	display: grid;
@@ -138,6 +205,8 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 }
 
 .main-page-right-side-container {
+	min-width: 50%;
+	max-width: 90%;
 	min-height: 42vh;
 	display: flex;
 	flex-direction: column;
