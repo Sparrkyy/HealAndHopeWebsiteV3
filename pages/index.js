@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import Navbar from '../components/Navbar';
 
 export default function Home() {
 	return (
@@ -13,93 +11,87 @@ export default function Home() {
 
 			<main>
 				<div className='main-whole-page-container'>
-					<div className='main-page-container'>
-						<div className='main-page-left-side-container'>
-							<img src='/Logo.png' alt='healandhope logo' width='80%'></img>
-						</div>
-						<div className='main-page-right-side-container'>
-							<div className='main-right-side-long-text'>
-								Giving children a second chance at life
-							</div>
-							<div className='main-right-light-text'>
-								sheding light on overlooked cases of children that have been
-								injured, wounded, or deformed as a result of warfare or
-								conflict, with the purpose of providing essential reconstructive
-								surgery.
-							</div>
-							<button className='main-right-donate-button'>Donate here</button>
-						</div>
-					</div>
+					<MainPageBlock
+						containerID='firstMainPageBlock'
+						header='Giving children a second chance at life'
+						mainText='sheding light on overlooked cases of children that have been injured,
+					wounded, or deformed as a result of warfare or conflict, with the
+					purpose of providing essential reconstructive surgery.'
+						buttonText='Donate Here'
+						imageSource='/Logo.png'
+						imageAlt='Heal And Hope Logo'
+					/>
 					<div className='main-cards-container'>
-						<div className='main-card'>
-							<h3 className='main-card-title'>Fundraising Goal:</h3>
-							<div className='main-card-body'>
-								<h4 className='main-card-display-number'>10,000$</h4>
-							</div>
-							<div className='main-card-image-container'>
-								<img
-									src='/fundraising.png'
-									alt='fundraising hands'
-									width='20%'
-								></img>
-							</div>
-						</div>
-						<div className='main-card'>
-							<h3 className='main-card-title'>Funds raised so far:</h3>
-							<div className='main-card-body'>
-								<h4 className='main-card-display-number'>5,000$</h4>
-							</div>
-							<div className='main-card-image-container'>
-								<img
-									src='/fundraisingHeart.png'
-									alt='fundraising heart'
-									width='20%'
-								></img>
-							</div>
-						</div>
-						<div className='main-card'>
-							<h3 className='main-card-title'>Surgeries funded: </h3>
-							<div className='main-card-body'>
-								<h4 className='main-card-display-number'>43</h4>
-							</div>
-							<div className='main-card-image-container'>
-								<img
-									src='/doctor.png'
-									alt='fundraising heart'
-									width='20%'
-								></img>
-							</div>
-						</div>
+						<MainPageCard
+							titleText='Fundraising Goal:'
+							titleNumber='10,000$'
+							imageSRC='/fundraising.png'
+							imageALT='fundraising hands'
+						/>
+						<MainPageCard
+							titleText='Funds raised:'
+							titleNumber='5,000$'
+							imageSRC='/fundraisingHeart.png'
+							imageALT='fundraising heart'
+						/>
+						<MainPageCard
+							titleText='Surgeries Funded:'
+							titleNumber='43'
+							imageSRC='/doctor.png'
+							imageALT='fundraising doctor'
+						/>
 					</div>
-					<div className='main-page-partnership-container'>
-						<div className='main-page-partnership-left-side-container'>
-							<img
-								src='/cowfLogo2.png'
-								alt='healandhope logo'
-								width='80%'
-							></img>
-						</div>
-						<div className='main-page-partnership-right-side-container'>
-							<div className='main-right-partnership-side-long-text'>
-								Our partner: The Children Of War Fondation
-							</div>
-							<div className='main-right-partnership-light-text'>
-								COWF has evolved from saving one life at a time to now being on
-								the forefront of systematic change with life enabling healthcare
-								and education, all in an effort to heal communities through
-								capacity building. COWF continues to build and draw a global
-								presence through its remote networks & partners, engaging with
-								health care professionals, innovators, educators, scientists,
-								private, public, governmental, academic, and institutional
-								entities, from across the globe.
-							</div>
-							<button className='main-right-donate-button'>Learn More</button>
-						</div>
-					</div>
+					<MainPageBlock
+						imageSource='/cowfLogo2.png'
+						imageAlt='Children of war foundation logo'
+						header='Our partner: The Children Of War Fondation'
+						mainText='COWF has evolved from saving one life at a time to now being on
+					the forefront of systematic change with life enabling healthcare
+					and education, all in an effort to heal communities through
+					capacity building. COWF continues to build and draw a global
+					presence through its remote networks & partners, engaging with
+					health care professionals, innovators, educators, scientists,
+					private, public, governmental, academic, and institutional
+					entities, from across the globe.'
+						buttonText='Learn More'
+						containerID='secondMainPageBlock'
+					/>
 				</div>
-
-				{/* <Image src='/Logo.png' alt='Heal and hope logo' layout='fill'></Image> */}
 			</main>
 		</div>
 	);
 }
+
+const MainPageBlock = ({
+	containerID,
+	imageSource,
+	imageAlt,
+	header,
+	mainText,
+	buttonText,
+}) => {
+	return (
+		<div className='main-page-section-container' id={containerID}>
+			<img src={imageSource} alt={imageAlt} className='main-page-image'></img>
+			<div className='main-page-right-side-container'>
+				<div className='main-right-side-long-text'>{header}</div>
+				<div className='main-right-light-text'>{mainText}</div>
+				<button className='main-right-donate-button'>{buttonText}</button>
+			</div>
+		</div>
+	);
+};
+
+const MainPageCard = ({ imageSRC, imageALT, titleText, titleNumber }) => {
+	return (
+		<div className='main-card'>
+			<h3 className='main-card-title'>{titleText}</h3>
+			<div className='main-card-body'>
+				<h4 className='main-card-display-number'>{titleNumber}</h4>
+			</div>
+			<div className='main-card-image-container'>
+				<img src={imageSRC} alt={imageALT} width='20%'></img>
+			</div>
+		</div>
+	);
+};

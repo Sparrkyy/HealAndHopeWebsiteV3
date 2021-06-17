@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
 
+#__next {
+	background-repeat: repeat;
+}
+
 html,
 body {
 	padding: 0;
@@ -18,6 +22,7 @@ a {
 
 * {
 	box-sizing: border-box;
+	opacity: 100%;
 }
 
 main {
@@ -43,6 +48,7 @@ h5 {
 	--larger-padding: 0.8rem;
 	--large-font-size: 2.3rem;
 	--small-font-size: 1rem;
+	--box-shadow-standard: 5px 5px 5px var(--primary-black);
 	/* Doesn't actually work but for a quick reference */
 	--large-media-query: 920px;
 }
@@ -60,11 +66,12 @@ THIS IS FOR THE NAVBAR
 	align-items: center;
 	min-height: 7vh;
 	min-width: 100vw;
-	box-shadow: 0 0 4px var(--primary-black);
+	box-shadow: 1px 1px 6px var(--primary-black);
 	position: fixed;
 	top: 0;
 	width: 100%;
 	background-color: var(--primary-white);
+	opacity: 92%;
 }
 
 .Navbar-title {
@@ -120,12 +127,14 @@ THIS IS FOR THE NAVBAR
 
 .Navbar-Menu-Dropdown-Container {
 	position: absolute;
-	width: 200px;
+	width: 300px;
 	top: 44px;
 	transform: translateX(-90%);
 	background-color: var(--primary-white);
-	border: var(--primary-black) 1px solid;
+	border: var(--primary-black) 2px solid;
+	border-radius: var(--primary-padding);
 	padding: 1rem;
+	box-shadow: var(--box-shadow-standard);
 	/*  */
 	display: flex;
 	flex-direction: column;
@@ -156,21 +165,63 @@ THIS IS FOR THE NAVBAR
 THIS IS FOR THE MAIN PAGE AND ITS PARTS
 ############################################## 
  */
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
 .main-whole-page-container {
 	max-width: 1280px;
 }
-.main-page-container {
+.main-page-section-container {
 	min-width: 100%;
 	min-height: 50vh;
 	display: flex;
-	padding-top: 18vh;
+	padding: 1rem 2rem;
+	justify-content: space-around;
+	align-items: center;
+	animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
-.main-page-container {
+#firstMainPageBlock {
+	margin-top: 10vh;
+}
+
+#secondMainPageBlock {
 	flex-direction: row-reverse;
 }
 
+.main-page-image {
+	width: 40vw;
+}
+
 @media (max-width: 920px) {
+	.main-page-image {
+		width: 65%;
+	}
+	.main-page-section-container {
+		flex-direction: column;
+	}
+	#secondMainPageBlock {
+		flex-direction: column;
+	}
 	.main-page-container {
 		flex-direction: column;
 		align-items: center;
@@ -220,11 +271,11 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	font-weight: 800;
 	color: var(--primary-black);
 	font-size: var(--large-font-size);
-	width: 20ch;
+	/* width: 20ch; */
 }
 
 .main-right-light-text {
-	width: 51ch;
+	/* width: 51ch; */
 	font-family: 'Karla';
 	font-weight: 200;
 	font-size: var(--small-font-size);
@@ -242,7 +293,7 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	font-weight: 400;
 	font-size: var(--small-font-size);
 	border-radius: var(--primary-padding);
-	box-shadow: 1px 1px 3px var(--primary-black);
+	box-shadow: var(--box-shadow-standard);
 	animation: buttonGrow 0.5;
 }
 
@@ -283,13 +334,14 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	justify-content: space-around;
 	align-items: center;
 	padding: 5rem 0;
+	animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .main-card {
 	width: 30%;
 	min-height: 25vh;
 	border: solid 1px var(--primary-black);
-	box-shadow: 1px 1px 3px var(--primary-black);
+	box-shadow: var(--box-shadow-standard);
 	padding: var(--primary-padding);
 	border-radius: var(--primary-padding);
 }
@@ -313,54 +365,4 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	width: 100%;
 	display: flex;
 	justify-content: center;
-}
-
-/*
-##############################################
-THIS IS FOR THE PARTNERSHIP MESSAGE UNDERNEITH
-############################################## 
- */
-
-.main-page-partnership-container {
-	min-width: 100%;
-	min-height: 50vh;
-	display: flex;
-	padding-bottom: 5vh;
-	flex-direction: row;
-}
-
-.main-page-partnership-left-side-container {
-	min-width: 50%;
-}
-.main-page-partnership-right-side-container {
-	min-width: 50%;
-}
-.main-page-partnership-left-side-container {
-	min-height: 42vh;
-	display: grid;
-	place-items: center;
-}
-
-.main-page-partnership-right-side-container {
-	min-height: 42vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: var(--primary-padding);
-}
-
-.main-right-partnership-side-long-text {
-	font-family: 'Rubik';
-	font-weight: 800;
-	color: var(--primary-black);
-	font-size: var(--large-font-size);
-	width: 20ch;
-}
-
-.main-right-partnership-light-text {
-	width: 51ch;
-	font-weight: var(--small-font-size);
-	font-family: 'Karla';
-	font-weight: 200;
-	margin-top: var(--primary-padding);
 }
