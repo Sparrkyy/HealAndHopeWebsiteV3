@@ -9,7 +9,7 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Rubik';
+	font-family: var(--title-font);
 	background-color: var(--primary-white);
 	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
@@ -27,8 +27,10 @@ a {
 
 main {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 h1,
@@ -49,6 +51,8 @@ h5 {
 	--large-font-size: 2.3rem;
 	--small-font-size: 1rem;
 	--box-shadow-standard: 5px 5px 5px var(--primary-black);
+	--title-font: 'Rubik';
+	--body-font: 'Karla';
 	/* Doesn't actually work but for a quick reference */
 	--large-media-query: 920px;
 }
@@ -71,18 +75,18 @@ THIS IS FOR THE NAVBAR
 	top: 0;
 	width: 100%;
 	background-color: var(--primary-white);
-	opacity: 92%;
+	background-color: hsla(0, 0%, 100%, 0.9);
 }
 
 .Navbar-title {
-	font-family: 'Rubik';
+	font-family: var(--title-font);
 	font-weight: 800;
 	font-size: var(--large-font-size);
 	color: var(--primary-black);
 }
 
 .Navbar-link {
-	font-family: 'Karla';
+	font-family: var(--body-font);
 	font-weight: 200;
 	font-size: var(--small-font-size);
 	cursor: pointer;
@@ -99,7 +103,7 @@ THIS IS FOR THE NAVBAR
 	}
 	to {
 		font-weight: 800;
-		font-family: 'Rubik';
+		font-family: var(--title-font);
 		font-size: 1.2rem;
 		color: var(--primary-sky-blue);
 	}
@@ -108,7 +112,7 @@ THIS IS FOR THE NAVBAR
 @keyframes hoverLinkReverse {
 	from {
 		font-weight: 800;
-		font-family: 'Rubik';
+		font-family: var(--title-font);
 		font-size: 1.2rem;
 		color: var(--primary-sky-blue);
 	}
@@ -188,7 +192,7 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 }
 
 .main-whole-page-container {
-	max-width: 1280px;
+	min-width: 100%;
 }
 .main-page-section-container {
 	min-width: 100%;
@@ -267,16 +271,16 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 }
 
 .main-right-side-long-text {
-	font-family: 'Rubik';
+	font-family: var(--title-font);
 	font-weight: 800;
 	color: var(--primary-black);
 	font-size: var(--large-font-size);
-	/* width: 20ch; */
+	max-width: 20ch;
 }
 
 .main-right-light-text {
-	/* width: 51ch; */
-	font-family: 'Karla';
+	max-width: 70ch;
+	font-family: var(--body-font);
 	font-weight: 200;
 	font-size: var(--small-font-size);
 	margin-top: var(--primary-padding);
@@ -289,7 +293,7 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	background-color: var(--primary-white);
 	margin-top: var(--primary-padding);
 	max-width: 8rem;
-	font-family: 'Karla';
+	font-family: var(--body-font);
 	font-weight: 400;
 	font-size: var(--small-font-size);
 	border-radius: var(--primary-padding);
@@ -317,8 +321,8 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	}
 	to {
 		color: var(--primary-white);
-		background-color: var(--primary-sky-blue);
-		border: 1px solid var(--primary-white);
+		background-color: var(--primary-black);
+		box-shadow: 1px 1px 3px var(--primary-black);
 	}
 }
 
@@ -329,12 +333,13 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
  */
 
 .main-cards-container {
-	min-height: 40vh;
+	min-height: 20vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 5rem 0;
-	animation: 1s ease-out 0s 1 slideInFromRight;
+	padding: 2rem 0;
+
+	/* background-color: hsla(197, 71%, 73%, 0.4); */
 }
 
 .main-card {
@@ -344,6 +349,8 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	box-shadow: var(--box-shadow-standard);
 	padding: var(--primary-padding);
 	border-radius: var(--primary-padding);
+	background-color: var(--primary-white);
+	animation: 1s ease-out 0s 1 slideInFromRight;
 }
 
 .main-card-title {
@@ -365,4 +372,35 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 	width: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+/*
+##############################################
+THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
+############################################## 
+ */
+
+footer {
+	min-width: 100%;
+	min-height: 10vh;
+	background-color: gainsboro;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: grey;
+	flex-direction: column;
+	padding: var(--primary-padding);
+}
+
+.footer-trademark {
+	color: grey;
+	font-family: var(--body-font);
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.footer-email {
+	color: grey;
+	font-family: var(--body-font);
+	font-size: 0.9rem;
 }
