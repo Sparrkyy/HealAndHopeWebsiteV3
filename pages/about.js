@@ -10,25 +10,60 @@ const about = () => {
 			</Head>
 
 			<main>
-				<div className='main-whole-page-container'>
-					<MainPageBlock
-						containerID='firstMainPageBlock'
-						header='About Us'
-						mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
-						buttonText='Learn More'
-						imageSource='/Logo.png'
-						imageAlt='Heal And Hope Logo'
-					/>
+				<div className='sub-main-whole-page-container'>
+					<BannerAndContent>
+						<TitleBanner
+							title='About Us'
+							subtitle='Heal and Hope chapters and functioning'
+						/>
+						<MainPageBlock
+							containerID='firstMainPageBlock'
+							header='McGill University Chapter'
+							mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
+							imageSource='/McgillLogo.png'
+							imageAlt='Heal And Hope Logo'
+						/>
+					</BannerAndContent>
+					<BannerAndContent>
+						<TitleBanner
+							title='Partnership logistics'
+							subtitle='How we work with The Children Of War Foundation'
+						/>
+						<img
+							alt='diagram of partnership flow'
+							src='/PartnershipLogs-removebg.png'
+							className='sub-page-large-image'
+						/>
+					</BannerAndContent>
 				</div>
-				<footer>
-					<a className='footer-trademark' href='#'>
-						Copyright © 2021 heal and hope | www.healandhope.net | All Rights
-						Reserved{' '}
-					</a>
-					<p className='footer-email'>healandhopewebmaster@gmail.com</p>
-				</footer>
+				<PageFooter />
 			</main>
 		</>
+	);
+};
+
+const BannerAndContent = ({ children }) => {
+	return <div className='sub-page-banner-and-content'>{children}</div>;
+};
+
+const PageFooter = () => {
+	return (
+		<footer>
+			<a className='footer-trademark' href='#'>
+				Copyright © 2021 heal and hope | www.healandhope.net | All Rights
+				Reserved{' '}
+			</a>
+			<p className='footer-email'>healandhopewebmaster@gmail.com</p>
+		</footer>
+	);
+};
+
+const TitleBanner = ({ title, subtitle }) => {
+	return (
+		<div className='sub-page-title-banner-container'>
+			<h2 className='sub-page-title'>{title}</h2>
+			{subtitle && <p className='sub-page-sub-title'>{subtitle}</p>}
+		</div>
 	);
 };
 
@@ -46,7 +81,9 @@ const MainPageBlock = ({
 			<div className='main-page-right-side-container'>
 				<div className='main-right-side-long-text'>{header}</div>
 				<div className='main-right-light-text'>{mainText}</div>
-				<button className='main-right-donate-button'>{buttonText}</button>
+				{buttonText && (
+					<button className='main-right-donate-button'>{buttonText}</button>
+				)}
 			</div>
 		</div>
 	);

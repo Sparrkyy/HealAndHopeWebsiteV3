@@ -1,20 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
 
-const LinkList = () => {
+const LinkList = ({ handleClose }) => {
 	return (
 		<>
 			<Link href='/'>
-				<div className='Navbar-link'>Home</div>
+				<div className='Navbar-link' onClick={handleClose}>
+					Home
+				</div>
 			</Link>
 			<Link href='/about'>
-				<div className='Navbar-link'>About</div>
+				<div className='Navbar-link' onClick={handleClose}>
+					About
+				</div>
 			</Link>
 			<Link href='/thechildren'>
-				<div className='Navbar-link'>The Children</div>
+				<div className='Navbar-link' onClick={handleClose}>
+					The Children
+				</div>
 			</Link>
 			<Link href='/contact'>
-				<div className='Navbar-link'>Contact</div>
+				<div className='Navbar-link' onClick={handleClose}>
+					Contact
+				</div>
 			</Link>
 		</>
 	);
@@ -33,18 +41,23 @@ const Navbar = () => {
 
 const NavbarDropdown = () => {
 	const [open, setOpen] = React.useState(false);
+
+	const setMenuClosed = () => {
+		setOpen(false);
+	};
+
 	return (
 		<div className='Navbar-Menu-Dropdown-Super-Container'>
-			<h4
-				className='Navbar-Menu-Dropdown-Button'
+			<img
+				className='Navbar-Menu-Dropdown-Burger'
+				src='/hamburger-removebg-preview.png'
+				alt='dropdown menu icon, click here to open'
 				onClick={() => setOpen(!open)}
-			>
-				Menu
-			</h4>
+			></img>
 			{open && (
 				<div className='Navbar-Menu-Dropdown-Container'>
 					{' '}
-					<LinkList />
+					<LinkList handleClose={setMenuClosed} />
 				</div>
 			)}
 		</div>
