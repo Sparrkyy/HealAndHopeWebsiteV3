@@ -1,7 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap'); */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* 
+Working to do list: 
+
+mimicking this site: https://folio-gatsby-live.netlify.app/
+
+I need to remake the navbar to have better spacing and mimick above one
+I need to do responsiveness again. 
+remove traces of the stupid button styling I stole
+and the svg that I stole lmao, make a new component for that 
+
+
+
+*/
 html,
 body {
 	padding: 0;
@@ -42,17 +56,18 @@ h5 {
 :root {
 	/* --primary-black: #2c2c2c; */
 	--primary-black: #1c1a1d;
+	--primary-white: #fff;
 	/* --primary-black: #707983; */
-	--primary-white: #eaeced;
-	--primary-white: white;
+	/* --primary-white: #eaeced;
+	--primary-white: white; */
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
 	--larger-padding: 0.8rem;
 	--large-font-size: 2.1rem;
 	--small-font-size: 1rem;
 	--box-shadow-standard: 2px 4px 5px black;
-	--title-font: 'Rubik';
-	--body-font: 'Karla';
+	--title-font: Inter, sans-serif;
+	--body-font: Inter, sans-serif;
 	--nav-bar-height: 11vh;
 	--primary-border: var(--primary-black) 0px solid;
 	/* Doesn't actually work but for a quick reference */
@@ -77,14 +92,13 @@ THIS IS FOR THE NAVBAR
  */
 
 .Navbar {
-	padding: var(--primary-padding);
+	padding: 1rem 2rem 1rem 2rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: var(--nav-bar-height);
 	min-width: 100vw;
-	max-width: 100vw;
-	box-shadow: 0 1px 20px var(--primary-black);
+
 	position: fixed;
 
 	background-color: var(--primary-white);
@@ -93,8 +107,8 @@ THIS IS FOR THE NAVBAR
 
 .Navbar-title {
 	font-family: var(--title-font);
-	font-weight: 800;
-	font-size: var(--large-font-size);
+	font-weight: 700;
+	font-size: 1.5rem;
 	color: var(--primary-black);
 
 	white-space: nowrap;
@@ -102,11 +116,12 @@ THIS IS FOR THE NAVBAR
 
 .Navbar-link {
 	font-family: var(--body-font);
-	font-weight: 200;
+	font-weight: 700;
 	font-size: var(--small-font-size);
 	cursor: pointer;
 	text-align: center;
 	margin: 0;
+	text-transform: lowercase;
 }
 .Navbar-link:hover {
 }
@@ -178,7 +193,7 @@ THIS IS FOR THE NAVBAR
 .Navbar-links {
 	display: flex;
 	justify-content: space-around;
-	min-width: 30vw;
+	min-width: 43vw;
 }
 
 @media (max-width: 920px) {
@@ -454,7 +469,7 @@ footer {
 
 /*
 ##############################################
-THIS IS FOR THE FOOTER
+THIS IS FOR THE ABOUT PAGE
 ############################################## 
  */
 
@@ -504,4 +519,114 @@ THIS IS FOR THE FOOTER
 }
 
 @media (max-width: 920px) {
+}
+
+/*
+##############################################
+THIS IS FOR NEW FRONT PAGE
+############################################## 
+ */
+
+.front-page-section-container {
+	max-width: 1140px;
+	min-height: 85vh;
+	display: flex;
+	padding: 1rem 2rem;
+	justify-content: space-around;
+	align-items: center;
+	animation: 1s ease-out 0s 1 slideInFromLeft;
+	color: var(--primary-black);
+}
+
+.front-page-section-text-container {
+	min-width: 50%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 0 2rem;
+}
+
+.front-page-section-image {
+	max-width: 50%;
+}
+
+.front-page-section-caps-smaller-message {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: var(--title-font);
+	letter-spacing: 2px;
+	font-size: 13px;
+	color: rgb(22, 28, 45);
+	margin-bottom: 40px;
+	margin-top: 0px;
+}
+
+.front-page-section-larger-message {
+	font-family: var(--title-font);
+	font-size: 76px;
+	font-weight: 700;
+	letter-spacing: -2.8px;
+	line-height: 70px;
+	text-size-adjust: 100%;
+	color: rgb(22, 28, 45);
+	min-width: 10ch;
+	max-width: 14ch;
+}
+
+.spacer {
+	margin-top: 20px;
+}
+
+.front-page-section-button {
+}
+
+.Box-sc-1wo68lt-0 {
+	font-family: Inter, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: left;
+	color: rgba(22, 28, 45, 0.7) !important;
+	box-sizing: border-box;
+	min-width: 0px;
+	margin-top: 52px;
+}
+
+.Button__ButtonStyled-w61ggs-0 {
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 1.63px;
+	text-transform: uppercase;
+	padding: 23px 30px;
+	box-shadow: rgba(3, 3, 3, 0.12) 0px 32px 54px;
+	border-radius: 50rem;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	user-select: none;
+	transform: perspective(1px) translateZ(0px);
+	position: relative;
+	overflow: hidden;
+	border: none;
+	white-space: nowrap;
+	color: rgb(255, 255, 255);
+	background-color: rgb(73, 95, 239);
+	transition: all 0.4s ease-out 0s;
+	outline: none !important;
+	cursor: pointer;
+}
+
+#SVGDoc {
+	margin-left: 7px;
+}
+
+.container {
+	max-width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -13,17 +13,19 @@ export default function Home() {
 
 			<main>
 				<div className='main-whole-page-container'>
-					<MainPageBlock
-						containerID='firstMainPageBlock'
-						header='Giving children a second chance at life'
-						mainText='sheding light on overlooked cases of children that have been injured,
-					wounded, or deformed as a result of warfare or conflict, with the
-					purpose of providing essential reconstructive surgery.'
-						buttonText='Donate Here'
-						imageSource='/Logo.png'
-						imageAlt='Heal And Hope Logo'
-						buttonHREF='/'
-					/>
+					<div className='spacer'></div>
+					<div className='container'>
+						<MainPageBlock2
+							containerID='firstMainPageBlock'
+							header='Student Organization. Global Impact.'
+							mainText='Giving children a second chance at life'
+							buttonText='Donate Here'
+							imageSource='/Logo.png'
+							imageAlt='Heal And Hope Logo'
+							buttonHREF='/'
+						/>
+					</div>
+
 					<div className='main-cards-container'>
 						<MainPageCard
 							titleText='Fundraising Goal:'
@@ -72,6 +74,87 @@ export default function Home() {
 		</>
 	);
 }
+
+const MainPageBlock2 = ({
+	containerID,
+	imageSource,
+	imageAlt,
+	header,
+	mainText,
+	buttonText,
+	buttonHREF,
+}) => {
+	const router = useRouter();
+	return (
+		<div className='front-page-section-container' id={containerID}>
+			<div className='front-page-section-text-container'>
+				<p className='front-page-section-caps-smaller-message'>{header}</p>
+				<div className='front-page-section-larger-message'>{mainText}</div>
+				<div class='Box-sc-1wo68lt-0 jEiBhi'>
+					<a>
+						<button
+							color='#fff'
+							class='Button__ButtonStyled-w61ggs-0 clbKww'
+							onClick={() => router.push(buttonHREF)}
+						>
+							{buttonText}
+							<svg
+								id='SVGDoc'
+								width='18'
+								height='12'
+								xmlns='http://www.w3.org/2000/svg'
+								version='1.1'
+								viewBox='0 0 18 12'
+								class='Button___StyledSvg-w61ggs-1 kJIzYi'
+							>
+								<defs></defs>
+								<desc>Generated with Avocode.</desc>
+								<g>
+									<g>
+										<title>tail-right</title>
+										<g>
+											<title>Path</title>
+											<path
+												d='M1,5.5h16'
+												fill-opacity='0'
+												fill='#ffffff'
+												stroke-linejoin='round'
+												stroke-linecap='round'
+												stroke-opacity='1'
+												stroke='#ffffff'
+												stroke-miterlimit='20'
+												stroke-width='2'
+											></path>
+										</g>
+										<g>
+											<title>Path</title>
+											<path
+												d='M12,1v0l5,5v0l-5,5v0'
+												fill-opacity='0'
+												fill='#ffffff'
+												stroke-linejoin='round'
+												stroke-linecap='round'
+												stroke-opacity='1'
+												stroke='#ffffff'
+												stroke-miterlimit='20'
+												stroke-width='2'
+											></path>
+										</g>
+									</g>
+								</g>
+							</svg>
+						</button>
+					</a>
+				</div>
+			</div>
+			<img
+				src={imageSource}
+				alt={imageAlt}
+				className='front-page-section-image'
+			></img>
+		</div>
+	);
+};
 
 const MainPageBlock = ({
 	containerID,
