@@ -90,59 +90,15 @@ const MainPageBlock2 = ({
 			<div className='front-page-section-text-container'>
 				<p className='front-page-section-caps-smaller-message'>{header}</p>
 				<div className='front-page-section-larger-message'>{mainText}</div>
-				<div class='Box-sc-1wo68lt-0 jEiBhi'>
+				<div class='front-page-section-donation-button-container'>
 					<a>
 						<button
 							color='#fff'
-							class='Button__ButtonStyled-w61ggs-0 clbKww'
+							class='front-page-section-donation-button'
 							onClick={() => router.push(buttonHREF)}
 						>
 							{buttonText}
-							<svg
-								id='SVGDoc'
-								width='18'
-								height='12'
-								xmlns='http://www.w3.org/2000/svg'
-								version='1.1'
-								viewBox='0 0 18 12'
-								class='Button___StyledSvg-w61ggs-1 kJIzYi'
-							>
-								<defs></defs>
-								<desc>Generated with Avocode.</desc>
-								<g>
-									<g>
-										<title>tail-right</title>
-										<g>
-											<title>Path</title>
-											<path
-												d='M1,5.5h16'
-												fill-opacity='0'
-												fill='#ffffff'
-												stroke-linejoin='round'
-												stroke-linecap='round'
-												stroke-opacity='1'
-												stroke='#ffffff'
-												stroke-miterlimit='20'
-												stroke-width='2'
-											></path>
-										</g>
-										<g>
-											<title>Path</title>
-											<path
-												d='M12,1v0l5,5v0l-5,5v0'
-												fill-opacity='0'
-												fill='#ffffff'
-												stroke-linejoin='round'
-												stroke-linecap='round'
-												stroke-opacity='1'
-												stroke='#ffffff'
-												stroke-miterlimit='20'
-												stroke-width='2'
-											></path>
-										</g>
-									</g>
-								</g>
-							</svg>
+							<ArrowSVG />
 						</button>
 					</a>
 				</div>
@@ -153,6 +109,56 @@ const MainPageBlock2 = ({
 				className='front-page-section-image'
 			></img>
 		</div>
+	);
+};
+
+const ArrowSVG = () => {
+	return (
+		<svg
+			id='SVGDoc'
+			width='18'
+			height='12'
+			xmlns='http://www.w3.org/2000/svg'
+			version='1.1'
+			viewBox='0 0 18 12'
+			className='Button___StyledSvg-w61ggs-1 kJIzYi'
+		>
+			<defs></defs>
+			<desc>Generated with Avocode.</desc>
+			<g>
+				<g>
+					<title>tail-right</title>
+					<g>
+						<title>Path</title>
+						<path
+							d='M1,5.5h16'
+							fillOpacity='0'
+							fill='#ffffff'
+							strokeLinejoin='round'
+							strokeLinecap='round'
+							strokeOpacity='1'
+							stroke='#ffffff'
+							strokeMiterlimit='20'
+							strokeWidth='2'
+						></path>
+					</g>
+					<g>
+						<title>Path</title>
+						<path
+							d='M12,1v0l5,5v0l-5,5v0'
+							fillOpacity='0'
+							fill='#ffffff'
+							strokeLinejoin='round'
+							strokeLinecap='round'
+							strokeOpacity='1'
+							stroke='#ffffff'
+							strokeMiterlimit='20'
+							strokeWidth='2'
+						></path>
+					</g>
+				</g>
+			</g>
+		</svg>
 	);
 };
 
@@ -187,11 +193,9 @@ const MainPageCard = ({ imageSRC, imageALT, titleText, titleNumber }) => {
 	return (
 		<div className='main-card'>
 			<h3 className='main-card-title'>{titleText}</h3>
-			<div className='main-card-body'>
-				<h4 className='main-card-display-number'>{titleNumber}</h4>
-			</div>
 			<div className='main-card-image-container'>
-				<img src={imageSRC} alt={imageALT} width='20%'></img>
+				<h4 className='main-card-display-number'>{titleNumber}</h4>
+				<img className='main-card-icon' src={imageSRC} alt={imageALT}></img>
 			</div>
 		</div>
 	);
