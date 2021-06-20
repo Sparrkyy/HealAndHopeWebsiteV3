@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import Head from 'next/head';
 
 export default function Home() {
@@ -20,6 +22,7 @@ export default function Home() {
 						buttonText='Donate Here'
 						imageSource='/Logo.png'
 						imageAlt='Heal And Hope Logo'
+						buttonHREF='/'
 					/>
 					<div className='main-cards-container'>
 						<MainPageCard
@@ -54,6 +57,7 @@ export default function Home() {
 					private, public, governmental, academic, and institutional
 					entities, from across the globe.'
 						buttonText='Learn More'
+						buttonHREF='/about'
 						containerID='secondMainPageBlock'
 					/>
 				</div>
@@ -76,14 +80,21 @@ const MainPageBlock = ({
 	header,
 	mainText,
 	buttonText,
+	buttonHREF,
 }) => {
+	const router = useRouter();
 	return (
 		<div className='main-page-section-container' id={containerID}>
 			<img src={imageSource} alt={imageAlt} className='main-page-image'></img>
 			<div className='main-page-right-side-container'>
 				<div className='main-right-side-long-text'>{header}</div>
 				<div className='main-right-light-text'>{mainText}</div>
-				<button className='main-right-donate-button'>{buttonText}</button>
+				<button
+					className='main-right-donate-button'
+					onClick={() => router.push(buttonHREF)}
+				>
+					{buttonText}
+				</button>
 			</div>
 		</div>
 	);
