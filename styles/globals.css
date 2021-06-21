@@ -16,6 +16,11 @@ and the svg that I stole lmao, make a new component for that
 
 
 */
+
+body {
+	display: flex;
+	flex-direction: column;
+}
 html,
 body {
 	padding: 0;
@@ -258,13 +263,14 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 .main-page-image {
 	max-width: 40vw;
 	max-height: 40vh;
-
+	width: 35vw;
 	padding: 1rem;
 }
 
 @media (max-width: 920px) {
 	.main-page-image {
 		max-width: 75% !important;
+		width: 75%;
 	}
 	.main-page-section-container {
 		flex-direction: column;
@@ -320,36 +326,16 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	font-family: var(--title-font);
 	font-weight: 800;
 	color: var(--primary-black);
-	font-size: var(--large-font-size);
+	font-size: calc(var(--large-font-size) * 1.5);
 	max-width: 20ch;
 }
 
 .main-right-light-text {
 	max-width: 60ch;
+	margin-top: 1.5rem;
 	font-family: var(--body-font);
 	font-weight: 200;
 	font-size: var(--small-font-size);
-	margin-top: var(--primary-padding);
-}
-
-.main-right-donate-button {
-	padding: var(--primary-padding);
-	color: var(--primary-black);
-	border: var(--primary-border);
-	background-color: var(--primary-white);
-	margin-top: var(--primary-padding);
-	max-width: 8rem;
-	font-family: var(--body-font);
-	font-weight: 400;
-	font-size: var(--small-font-size);
-
-	box-shadow: var(--box-shadow-standard);
-	animation: buttonGrow 0.5;
-}
-
-.main-right-donate-button:hover {
-	cursor: pointer;
-	animation: buttonGrowReverse 0.5s forwards;
 }
 
 @keyframes buttonGrow {
@@ -446,6 +432,7 @@ footer {
 	color: grey;
 	flex-direction: column;
 	padding: var(--primary-padding);
+	align-self: flex-end;
 }
 
 .footer-trademark {
@@ -562,7 +549,7 @@ THIS IS FOR NEW FRONT PAGE
 	line-height: 76px;
 	text-size-adjust: 100%;
 	color: rgb(22, 28, 45);
-	min-width: 45vw;
+	width: 45vw;
 	max-width: 13ch;
 }
 
