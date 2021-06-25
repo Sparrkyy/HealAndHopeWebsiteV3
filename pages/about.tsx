@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, {JSXElementConstructor} from 'react'
 import {MainPageBlockProps} from '../types/types'
+//import { MainPageBlock } from '../components/MainPageBlock'
 
 const about = () => {
 	return (
