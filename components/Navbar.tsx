@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {MouseEventHandler} from 'react';
 import Link from 'next/link';
 
-const LinkList = ({ handleClose }) => {
+type Props = {
+	handleClose : MouseEventHandler | undefined
+}
+
+const LinkList = ({ handleClose }: Props) => {
 	return (
 		<>
 			<Link href='/'>
@@ -30,9 +34,9 @@ const LinkList = ({ handleClose }) => {
 const Navbar = () => {
 	return (
 		<div className='Navbar'>
-			<h1 className='Navbar-title'>Heal & Hope</h1>
+			<h1 className='Navbar-title'>Heal & Hope.</h1>
 			<div className='Navbar-links'>
-				<LinkList />
+				<LinkList handleClose={undefined}/>
 			</div>
 			<NavbarDropdown />
 		</div>

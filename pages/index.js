@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function Home() {
 	return (
@@ -71,39 +71,23 @@ export default function Home() {
 	);
 }
 
-const MainPageBlock2 = ({
-	containerID,
-	imageSource,
-	imageAlt,
-	header,
-	mainText,
-	buttonText,
-	buttonHREF,
-}) => {
+const MainPageBlock2 = ({ containerID, imageSource, imageAlt, header, mainText, buttonText, buttonHREF }) => {
 	const router = useRouter();
 	return (
 		<div className='front-page-section-container' id={containerID}>
 			<div className='front-page-section-text-container'>
 				<p className='front-page-section-caps-smaller-message'>{header}</p>
 				<div className='front-page-section-larger-message'>{mainText}</div>
-				<div class='front-page-section-donation-button-container'>
+				<div className='front-page-section-donation-button-container'>
 					<a>
-						<button
-							color='#fff'
-							class='front-page-section-donation-button'
-							onClick={() => router.push(buttonHREF)}
-						>
+						<button color='#fff' className='front-page-section-donation-button' onClick={() => router.push(buttonHREF)}>
 							{buttonText}
 							<ArrowSVG />
 						</button>
 					</a>
 				</div>
 			</div>
-			<img
-				src={imageSource}
-				alt={imageAlt}
-				className='front-page-section-image'
-			></img>
+			<img src={imageSource} alt={imageAlt} className='front-page-section-image'></img>
 		</div>
 	);
 };
@@ -158,15 +142,7 @@ const ArrowSVG = () => {
 	);
 };
 
-const MainPageBlock = ({
-	containerID,
-	imageSource,
-	imageAlt,
-	header,
-	mainText,
-	buttonText,
-	buttonHREF,
-}) => {
+const MainPageBlock = ({ containerID, imageSource, imageAlt, header, mainText, buttonText, buttonHREF }) => {
 	const router = useRouter();
 	return (
 		<>
@@ -174,13 +150,9 @@ const MainPageBlock = ({
 			<div className='main-page-right-side-container'>
 				<div className='main-right-side-long-text'>{header}</div>
 				<div className='main-right-light-text'>{mainText}</div>
-				<div class='front-page-section-donation-button-container'>
+				<div className='front-page-section-donation-button-container'>
 					<a>
-						<button
-							color='#fff'
-							class='front-page-section-donation-button'
-							onClick={() => router.push(buttonHREF)}
-						>
+						<button color='#fff' className='front-page-section-donation-button' onClick={() => router.push(buttonHREF)}>
 							{buttonText}
 							<ArrowSVG />
 						</button>
