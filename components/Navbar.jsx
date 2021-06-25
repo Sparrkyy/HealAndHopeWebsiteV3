@@ -30,7 +30,7 @@ const LinkList = ({ handleClose }) => {
 const Navbar = () => {
 	return (
 		<div className='Navbar'>
-			<h1 className='Navbar-title'>HEAL & HOPE</h1>
+			<h1 className='Navbar-title'>Heal & Hope</h1>
 			<div className='Navbar-links'>
 				<LinkList />
 			</div>
