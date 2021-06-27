@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import React, {JSXElementConstructor} from 'react'
+import {MainPageBlockProps} from '../types/types'
+//import { MainPageBlock } from '../components/MainPageBlock'
 
 const about = () => {
 	return (
@@ -22,6 +25,7 @@ const about = () => {
 							mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
 							imageSource='/McgillLogo.png'
 							imageAlt='Heal And Hope Logo'
+							buttonText={undefined}
 						/>
 					</BannerAndContent>
 					<BannerAndContent>
@@ -42,7 +46,7 @@ const about = () => {
 	);
 };
 
-const BannerAndContent = ({ children }) => {
+const BannerAndContent = ({ children } : { children?: React.ReactNode;}) => {
 	return <div className='sub-page-banner-and-content'>{children}</div>;
 };
 
@@ -58,7 +62,7 @@ const PageFooter = () => {
 	);
 };
 
-const TitleBanner = ({ title, subtitle }) => {
+const TitleBanner = ({ title, subtitle } : { title: string; subtitle: string}) => {
 	return (
 		<div className='sub-page-title-banner-container'>
 			<h2 className='sub-page-title'>{title}</h2>
@@ -67,6 +71,9 @@ const TitleBanner = ({ title, subtitle }) => {
 	);
 };
 
+
+
+
 const MainPageBlock = ({
 	containerID,
 	imageSource,
@@ -74,7 +81,7 @@ const MainPageBlock = ({
 	header,
 	mainText,
 	buttonText,
-}) => {
+}:MainPageBlockProps) => {
 	return (
 		<div className='main-page-section-container' id={containerID}>
 			<img src={imageSource} alt={imageAlt} className='main-page-image'></img>
