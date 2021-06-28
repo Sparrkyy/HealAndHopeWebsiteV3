@@ -3,6 +3,7 @@ import React, { FC, JSXElementConstructor } from "react";
 import { MainPageBlockProps } from "../types/types";
 import { MainPageBlock } from "../components/MainPageBlock";
 import styles from "../styles/About.module.css";
+import stylesTheChildren from "../styles/TheChildren.module.css";
 
 const about = () => {
 	return (
@@ -18,41 +19,19 @@ const about = () => {
 					<section className={styles.about_page_first_section}>
 						<div className={styles.about_page_width_restriction_container}>
 							<div className={styles.pageTitleContainer}>
-								<h2 className={styles.pageTitle}>About us</h2>
-								<p className='front-page-section-caps-smaller-message'>Student Organization. Global Impact.</p>
+								<h2 className={styles.pageTitle}>The Children</h2>
+								<p className='front-page-section-caps-smaller-message'>The stories of those we have and hope to help</p>
 							</div>
 
 							<div className={styles.MainBlockContainer}>
 								<MainPageBlock
-									containerID='firstMainPageBlock'
-									header='McGill University Chapter'
-									mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
-									imageSource='/McgillLogo.png'
-									imageAlt='Heal And Hope Logo'
-									imageID='McGillLogo'
+									imageID={stylesTheChildren.childImageID}
+									containerID=''
+									header='First Name'
+									mainText='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+									imageSource='/ChildrenDefaultphoto.jpeg'
+									imageAlt='Picture Of Child'
 								/>
-							</div>
-						</div>
-					</section>
-					<section className={styles.about_page_second_section}>
-						<div className={styles.about_page_width_restriction_container}>
-							<div className={styles.pageTitleContainer}>
-								<h2 className={styles.pageTitle}>Our Team</h2>
-								<p className='front-page-section-caps-smaller-message'>Working Hard. Making It happen.</p>
-							</div>
-							<div className={styles.MainBlockContainer}>
-								<PositionCard Name='Full Name' Position='VP External' />
-								<PositionCard Name='Full Name' Position='VP Finance & Funraising' />
-								<PositionCard Name='Full Name' Position='VP Communications' />
-								<PositionCard Name='Full Name' Position='President' />
-								<PositionCard Name='Full Name' Position='VP Internal' />
-								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
-								<PositionCard Name='Full Name' Position='Secretary' />
-								<PositionCard Name='Full Name' Position='Internal Affairs Officer' />
-								<PositionCard Name='Full Name' Position='Media Coordinator' />
-								<PositionCard Name='Full Name' Position='Student Rep' />
-								<PositionCard Name='Full Name' Position='Fundraising Coordinator' />
-								<PositionCard Name='Full Name' Position='Finance Officer' />
 							</div>
 						</div>
 					</section>
