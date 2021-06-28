@@ -1,27 +1,41 @@
-import {useRouter} from 'next/router'
-import {MainPageBlock2Props} from '../types/types'
+import { useRouter } from "next/router";
+import { MainPageBlock2Props } from "../types/types";
 
-export const MainPageBlock = ({ containerID, imageSource, imageAlt, header, mainText, buttonText, buttonHREF }: MainPageBlock2Props) => {
+export const MainPageBlock = ({
+	containerID,
+	imageSource,
+	imageAlt,
+	header,
+	mainText,
+	buttonText,
+	buttonHREF,
+	imageID,
+}: MainPageBlock2Props) => {
 	const router = useRouter();
 	return (
 		<>
-			<img src={imageSource} alt={imageAlt} className='main-page-image'></img>
+			<img src={imageSource} alt={imageAlt} className='main-page-image' id={imageID ? imageID : undefined}></img>
 			<div className='main-page-right-side-container'>
 				<div className='main-right-side-long-text'>{header}</div>
 				<div className='main-right-light-text'>{mainText}</div>
-				<div className='front-page-section-donation-button-container'>
-					<a>
-						<button color='#fff' className='front-page-section-donation-button' onClick={() => router.push(buttonHREF)}>
-							{buttonText}
-							<ArrowSVG />
-						</button>
-					</a>
-				</div>
+				{buttonText && buttonHREF && (
+					<div className='front-page-section-donation-button-container'>
+						<a>
+							<button
+								color='#fff'
+								className='front-page-section-donation-button'
+								onClick={() => router.push(buttonHREF)}
+							>
+								{buttonText}
+								<ArrowSVG />
+							</button>
+						</a>
+					</div>
+				)}
 			</div>
 		</>
 	);
 };
-
 
 export const ArrowSVG = () => {
 	return (
@@ -72,4 +86,3 @@ export const ArrowSVG = () => {
 		</svg>
 	);
 };
-

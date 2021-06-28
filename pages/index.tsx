@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 
 import Head from "next/head";
 import { MainPageBlock2Props } from "../types/types";
-import {MainPageBlock, ArrowSVG } from '../components/MainPageBlock'
+import { MainPageBlock, ArrowSVG } from "../components/MainPageBlock";
 
 export default function Home() {
 	return (
@@ -73,99 +73,52 @@ export default function Home() {
 	);
 }
 
-const MainPageBlock2 = ({ containerID, imageSource, imageAlt, header, mainText, buttonText, buttonHREF }: MainPageBlock2Props) => {
+const MainPageBlock2 = ({
+	containerID,
+	imageSource,
+	imageAlt,
+	header,
+	mainText,
+	buttonText,
+	buttonHREF,
+}: MainPageBlock2Props) => {
 	const router = useRouter();
 	return (
 		<div className='front-page-section-container' id={containerID}>
 			<div className='front-page-section-text-container'>
 				<p className='front-page-section-caps-smaller-message'>{header}</p>
 				<div className='front-page-section-larger-message'>{mainText}</div>
-				<div className='front-page-section-donation-button-container'>
-					<a>
-						<button color='#fff' className='front-page-section-donation-button' onClick={() => router.push(buttonHREF)}>
-							{buttonText}
-							<ArrowSVG />
-						</button>
-					</a>
-				</div>
+				{buttonHREF && buttonText && (
+					<div className='front-page-section-donation-button-container'>
+						<a>
+							<button
+								color='#fff'
+								className='front-page-section-donation-button'
+								onClick={() => router.push(buttonHREF)}
+							>
+								{buttonText}
+								<ArrowSVG />
+							</button>
+						</a>
+					</div>
+				)}
 			</div>
 			<img src={imageSource} alt={imageAlt} className='front-page-section-image'></img>
 		</div>
 	);
 };
 
-// const ArrowSVG = () => {
-// 	return (
-// 		<svg
-// 			id='SVGDoc'
-// 			width='18'
-// 			height='12'
-// 			xmlns='http://www.w3.org/2000/svg'
-// 			version='1.1'
-// 			viewBox='0 0 18 12'
-// 			className='Button___StyledSvg-w61ggs-1 kJIzYi'
-// 		>
-// 			<defs></defs>
-// 			<desc>Generated with Avocode.</desc>
-// 			<g>
-// 				<g>
-// 					<title>tail-right</title>
-// 					<g>
-// 						<title>Path</title>
-// 						<path
-// 							d='M1,5.5h16'
-// 							fillOpacity='0'
-// 							fill='#ffffff'
-// 							strokeLinejoin='round'
-// 							strokeLinecap='round'
-// 							strokeOpacity='1'
-// 							stroke='#ffffff'
-// 							strokeMiterlimit='20'
-// 							strokeWidth='2'
-// 						></path>
-// 					</g>
-// 					<g>
-// 						<title>Path</title>
-// 						<path
-// 							d='M12,1v0l5,5v0l-5,5v0'
-// 							fillOpacity='0'
-// 							fill='#ffffff'
-// 							strokeLinejoin='round'
-// 							strokeLinecap='round'
-// 							strokeOpacity='1'
-// 							stroke='#ffffff'
-// 							strokeMiterlimit='20'
-// 							strokeWidth='2'
-// 						></path>
-// 					</g>
-// 				</g>
-// 			</g>
-// 		</svg>
-// 	);
-// };
-
-// const MainPageBlock = ({ containerID, imageSource, imageAlt, header, mainText, buttonText, buttonHREF }: MainPageBlock2Props) => {
-// 	const router = useRouter();
-// 	return (
-// 		<>
-// 			<img src={imageSource} alt={imageAlt} className='main-page-image'></img>
-// 			<div className='main-page-right-side-container'>
-// 				<div className='main-right-side-long-text'>{header}</div>
-// 				<div className='main-right-light-text'>{mainText}</div>
-// 				<div className='front-page-section-donation-button-container'>
-// 					<a>
-// 						<button color='#fff' className='front-page-section-donation-button' onClick={() => router.push(buttonHREF)}>
-// 							{buttonText}
-// 							<ArrowSVG />
-// 						</button>
-// 					</a>
-// 				</div>
-// 			</div>
-// 		</>
-// 	);
-// };
-
-const MainPageCard = ({ imageSRC, imageALT, titleText, titleNumber } : { imageSRC: string, imageALT: string, titleText: string, titleNumber: string}) => {
+const MainPageCard = ({
+	imageSRC,
+	imageALT,
+	titleText,
+	titleNumber,
+}: {
+	imageSRC: string;
+	imageALT: string;
+	titleText: string;
+	titleNumber: string;
+}) => {
 	return (
 		<div className='main-card'>
 			<h3 className='main-card-title'>{titleText}</h3>

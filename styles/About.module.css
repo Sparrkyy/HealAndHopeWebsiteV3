@@ -1,0 +1,98 @@
+.root {
+	/* --primary-black: #2c2c2c; */
+	--primary-black: #1c1a1d;
+	--primary-white: #fff;
+	/* --primary-black: #707983; */
+	/* --primary-white: #eaeced;
+	--primary-white: white; */
+	--primary-sky-blue: #87ceff;
+	--primary-padding: 1rem;
+	--larger-padding: 0.8rem;
+	--large-font-size: 2.1rem;
+	--small-font-size: 1rem;
+	--box-shadow-standard: 2px 4px 5px black;
+	--title-font: Inter, sans-serif;
+	--body-font: Inter, sans-serif;
+	--nav-bar-height: 11vh;
+	--primary-border: var(--primary-black) 0px solid;
+	/* Doesn't actually work but for a quick reference */
+	--large-media-query: 920px;
+	--primary-blue: #90ccf4;
+	--primary-red: #f78888;
+	--primary-green: #479761;
+	--primary-purple: #987bb9;
+}
+
+.about_page_first_section {
+	min-height: 85vh;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.about_page_width_restriction_container {
+	max-width: 1300px;
+	width: 90%;
+	padding: 1rem;
+}
+
+.pageTitle {
+	font-family: var(--body-font);
+	font-size: calc(var(--large-font-size) * 2.5);
+}
+
+.MainBlockContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 920px) {
+	.root {
+		--large-font-size: 1.7rem;
+		--small-font-size: 0.8rem;
+	}
+	.MainBlockContainer {
+	}
+}
+
+.about_page_second_section {
+	min-height: 100vh;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.pageTitleContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.PositionCard {
+	min-height: 40vh;
+	min-width: 20vh;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.PositionCardImage {
+	height: 20vh;
+	width: 20vh;
+	border-radius: 50%;
+
+	border: 1px solid gray;
+	text-align: center;
+	line-height: 20vh;
+}
+
+.PositionCardText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}

@@ -4,15 +4,16 @@ export interface MainPageBlockProps {
 	imageAlt: string;
 	header: string;
 	mainText: string;
-	buttonText: string | undefined;
+	buttonText?: string | undefined;
 }
 
 export interface MainPageBlock2Props {
-	containerID: string;
+	containerID?: string;
 	imageSource: string;
 	imageAlt: string;
 	header: string;
 	mainText: string;
-	buttonText: string;
-	buttonHREF: string;
+	buttonText?: string;
+	buttonHREF?: string;
+	imageID?: string;
 }
