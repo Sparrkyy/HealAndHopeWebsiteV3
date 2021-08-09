@@ -1,34 +1,16 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap'); */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-/* 
-Working to do list: 
-
-mimicking this site: https://folio-gatsby-live.netlify.app/
-
-I need to remake the navbar to have better spacing and mimick above one
-I need to do responsiveness again. 
-remove traces of the stupid button styling I stole
-and the svg that I stole lmao, make a new component for that 
-
-
-
-*/
-
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
 body {
 	display: flex;
 	flex-direction: column;
 }
+
 html,
 body {
 	padding: 0;
 	margin: 0;
 	font-family: var(--title-font);
 	background-color: var(--primary-white);
-	/* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+
 }
 
 a {
@@ -59,12 +41,10 @@ h5 {
 }
 
 :root {
-	/* --primary-black: #2c2c2c; */
+	
 	--primary-black: #1c1a1d;
 	--primary-white: #fff;
-	/* --primary-black: #707983; */
-	/* --primary-white: #eaeced;
-	--primary-white: white; */
+	
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
 	--larger-padding: 0.8rem;
@@ -75,7 +55,7 @@ h5 {
 	--body-font: Inter, sans-serif;
 	--nav-bar-height: 11vh;
 	--primary-border: var(--primary-black) 0px solid;
-	/* Doesn't actually work but for a quick reference */
+
 	--large-media-query: 920px;
 	--primary-blue: #90ccf4;
 	--primary-red: #f78888;
@@ -134,8 +114,7 @@ THIS IS FOR THE NAVBAR
 	display: flex;
 }
 
-.Navbar-link:hover {
-}
+
 
 @keyframes hoverLink {
 	from {
@@ -297,9 +276,9 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 		flex-direction: column !important;
 		align-items: center;
 	}
-	.main-right-side-long-text {
-	}
+
 }
+
 .main-page-left-side-container {
 	min-width: 50%;
 	max-width: 90%;
@@ -558,8 +537,7 @@ THIS IS FOR NEW FRONT PAGE
 	margin-top: 20px;
 }
 
-.front-page-section-button {
-}
+
 
 .front-page-section-donation-button-container {
 	margin-top: 52px;

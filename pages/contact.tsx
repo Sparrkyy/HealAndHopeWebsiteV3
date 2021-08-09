@@ -1,7 +1,5 @@
 import Head from "next/head";
-import React, { FC, ChangeEventHandler } from "react";
-import { MainPageBlockProps } from "../types/types";
-import { MainPageBlock } from "../components/MainPageBlock";
+import React, { FC } from "react";
 import styles from "../styles/About.module.css";
 import stylesContact from "../styles/Contact.module.css";
 
@@ -93,65 +91,5 @@ const about = () => {
 	);
 };
 
-const OldAboutPage: FC = () => {
-	return null;
-	// <div className='sub-main-whole-page-container'>
-	// 	<BannerAndContent>
-	// 		<TitleBanner title='About Us' subtitle='Heal and Hope chapters and functioning' />
-	// 		<MainPageBlock
-	// 			containerID='firstMainPageBlock'
-	// 			header='McGill University Chapter'
-	// 			mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
-	// 			imageSource='/McgillLogo.png'
-	// 			imageAlt='Heal And Hope Logo'
-	// 			buttonText={undefined}
-	// 		/>
-	// 	</BannerAndContent>
-	// 	<BannerAndContent>
-	// 		<TitleBanner title='Partnership logistics' subtitle='How we work with The Children Of War Foundation' />
-	// 		<img alt='diagram of partnership flow' src='/PartnershipLogs-removebg.png' className='sub-page-large-image' />
-	// 	</BannerAndContent>
-	// </div>
-};
-
-const PositionCard: FC<{ Name: string; Position: string; ProfileImage?: string }> = ({
-	Name,
-	Position,
-	ProfileImage,
-}) => {
-	return (
-		<div className={styles.PositionCard}>
-			<img src={ProfileImage} alt='Profile Image' className={styles.PositionCardImage} />
-			<div className={styles.PositionCardText}>
-				<h3>{Name}</h3>
-				<p>{Position}</p>
-			</div>
-		</div>
-	);
-};
-
-// const BannerAndContent = ({ children }: { children?: React.ReactNode }) => {
-// 	return <div className='sub-page-banner-and-content'>{children}</div>;
-// };
-
-// const PageFooter = () => {
-// 	return (
-// 		<footer>
-// 			<a className='footer-trademark' href='#'>
-// 				Copyright © 2021 heal and hope | www.healandhope.net | All Rights Reserved{" "}
-// 			</a>
-// 			<p className='footer-email'>healandhopewebmaster@gmail.com</p>
-// 		</footer>
-// 	);
-// };
-
-// const TitleBanner = ({ title, subtitle }: { title: string; subtitle: string }) => {
-// 	return (
-// 		<div className='sub-page-title-banner-container'>
-// 			<h2 className='sub-page-title'>{title}</h2>
-// 			{subtitle && <p className='sub-page-sub-title'>{subtitle}</p>}
-// 		</div>
-// 	);
-// };
 
 export default about;

@@ -43,7 +43,6 @@ export const ArrowSVG = () => {
 			id='SVGDoc'
 			width='18'
 			height='12'
-			xmlns='http://www.w3.org/2000/svg'
 			version='1.1'
 			viewBox='0 0 18 12'
 			className='Button___StyledSvg-w61ggs-1 kJIzYi'
