@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { FC } from "react";
+import React from "react";
 import styles from "../styles/About.module.css";
 import stylesContact from "../styles/Contact.module.css";
 

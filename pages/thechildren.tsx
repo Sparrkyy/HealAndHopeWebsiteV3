@@ -1,9 +1,8 @@
 import Head from "next/head";
-import React, { FC, JSXElementConstructor } from "react";
-import { MainPageBlockProps } from "../types/types";
+import React, { FC } from "react";
 import { MainPageBlock } from "../components/MainPageBlock";
 import styles from "../styles/About.module.css";
-import stylesTheChildren from "../styles/TheChildren.module.css";
+// import stylesTheChildren from "../styles/TheChildren.module.css";
 
 const about = () => {
 	return (
