@@ -10,7 +10,7 @@ export default function Home() {
 			<Head>
 				<title>Heal and Hope</title>
 				<meta name='description' content='Heal And Hope Website' />
-				<link rel='icon' href='/favicon.ico' />
+				{/* <link rel='icon' href='/favicon.ico' /> */}
 			</Head>
 
 			<main>

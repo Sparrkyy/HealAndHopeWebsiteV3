@@ -1,5 +1,5 @@
 import React, {MouseEventHandler} from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 type Props = {
 	handleClose : MouseEventHandler | undefined
@@ -8,7 +8,7 @@ type Props = {
 const LinkList = ({ handleClose }: Props) => {
 	return (
 		<>
-			<Link href='/'>
+			{/* <Link href='/'>
 				<div className='Navbar-link' onClick={handleClose}>
 					Home
 				</div>
@@ -27,7 +27,7 @@ const LinkList = ({ handleClose }: Props) => {
 				<div className='Navbar-link' onClick={handleClose}>
 					Contact
 				</div>
-			</Link>
+			</Link> */}
 		</>
 	);
 };
