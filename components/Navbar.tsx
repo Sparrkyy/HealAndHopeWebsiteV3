@@ -1,14 +1,14 @@
-import React, {MouseEventHandler} from 'react';
-// import Link from 'next/link';
+import React, { MouseEventHandler } from "react";
+import Link from "next/link";
 
 type Props = {
-	handleClose : MouseEventHandler | undefined
-}
+	handleClose: MouseEventHandler | undefined;
+};
 
 const LinkList = ({ handleClose }: Props) => {
 	return (
 		<>
-			{/* <Link href='/'>
+			<Link href='/'>
 				<div className='Navbar-link' onClick={handleClose}>
 					Home
 				</div>
@@ -27,7 +27,7 @@ const LinkList = ({ handleClose }: Props) => {
 				<div className='Navbar-link' onClick={handleClose}>
 					Contact
 				</div>
-			</Link> */}
+			</Link>
 		</>
 	);
 };
@@ -36,7 +36,7 @@ const Navbar = () => {
 		<div className='Navbar'>
 			<h1 className='Navbar-title'>Heal & Hope.</h1>
 			<div className='Navbar-links'>
-				<LinkList handleClose={undefined}/>
+				<LinkList handleClose={undefined} />
 			</div>
 			<NavbarDropdown />
 		</div>
@@ -60,7 +60,7 @@ const NavbarDropdown = () => {
 			></img>
 			{open && (
 				<div className='Navbar-Menu-Dropdown-Container'>
-					{' '}
+					{" "}
 					<LinkList handleClose={setMenuClosed} />
 				</div>
 			)}

@@ -61,8 +61,6 @@ const about = () => {
 	);
 };
 
-
-
 const PositionCard: FC<{ Name: string; Position: string; ProfileImage?: string }> = ({
 	Name,
 	Position,
@@ -70,7 +68,7 @@ const PositionCard: FC<{ Name: string; Position: string; ProfileImage?: string }
 }) => {
 	return (
 		<div className={styles.PositionCard}>
-			{/* <img src={ProfileImage} alt='Profile Image' className={styles.PositionCardImage} /> */}
+			<img src={ProfileImage} alt='Profile Image' className={styles.PositionCardImage} />
 			<div className={styles.PositionCardText}>
 				<h3>{Name}</h3>
 				<p>{Position}</p>
