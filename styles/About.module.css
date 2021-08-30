@@ -1,0 +1,63 @@
+.about_page_first_section {
+	min-height: 85vh;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.about_page_width_restriction_container {
+	max-width: 1300px;
+	width: 90%;
+	padding: 1rem;
+}
+
+.pageTitle {
+	font-family: "Inter";
+	font-size: calc(2.7rem * 2.5);
+}
+
+.MainBlockContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	flex-wrap: wrap;
+}
+
+.about_page_second_section {
+	min-height: 100vh;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+}
+
+.pageTitleContainer {
+	flex-direction: column;
+}
+
+.PositionCard {
+	min-height: 40vh;
+	min-width: 20vh;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.PositionCardImage {
+	height: 20vh;
+	width: 20vh;
+	border-radius: 50%;
+
+	border: 1px solid gray;
+	text-align: center;
+	line-height: 20vh;
+}
+
+.PositionCardText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
