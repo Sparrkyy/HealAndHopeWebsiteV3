@@ -59,8 +59,7 @@ export default function Home() {
 								Our partnership with the Children of War foundation is crucial in meeting that goal. 
 								COWF has evolved from saving one life at a time to now being on
 								the forefront of systematic change with life enabling healthcare
-								and education.
- '
+								and education.'
 								buttonText='Learn More'
 								buttonHREF='/about'
 								containerID='secondMainPageBlock'
