@@ -31,7 +31,7 @@ const about = () => {
 					<section className={styles.about_page_first_section}>
 						<div className={styles.about_page_width_restriction_container}>
 							<div className={styles.pageTitleContainer}>
-								<h2 className={styles.pageTitle}>Contact us</h2>
+								<h2 className={"subpage_title_font_and_size"}>Contact us</h2>
 								<p className='front-page-section-caps-smaller-message'>
 									Want to join the team ? Problem with the website? Tell us!
 								</p>
@@ -90,6 +90,5 @@ const about = () => {
 		</>
 	);
 };
-
 
 export default about;

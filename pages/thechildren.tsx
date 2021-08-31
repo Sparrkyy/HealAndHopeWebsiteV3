@@ -18,7 +18,7 @@ const about = () => {
 					<section className={styles.about_page_first_section}>
 						<div className={styles.about_page_width_restriction_container}>
 							<div className={styles.pageTitleContainer}>
-								<h2 className={styles.pageTitle}>The Children</h2>
+								<h2 className={"subpage_title_font_and_size"}>The Children</h2>
 								<p className='front-page-section-caps-smaller-message'>The stories of those we have and hope to help</p>
 							</div>
 

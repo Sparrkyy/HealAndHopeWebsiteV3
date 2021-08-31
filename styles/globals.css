@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 body {
 	display: flex;
 	flex-direction: column;
@@ -10,7 +10,6 @@ body {
 	margin: 0;
 	font-family: var(--title-font);
 	background-color: var(--primary-white);
-
 }
 
 a {
@@ -41,10 +40,9 @@ h5 {
 }
 
 :root {
-	
 	--primary-black: #1c1a1d;
 	--primary-white: #fff;
-	
+
 	--primary-sky-blue: #87ceff;
 	--primary-padding: 1rem;
 	--larger-padding: 0.8rem;
@@ -113,8 +111,6 @@ THIS IS FOR THE NAVBAR
 .Navbar-links {
 	display: flex;
 }
-
-
 
 @keyframes hoverLink {
 	from {
@@ -276,7 +272,6 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 		flex-direction: column !important;
 		align-items: center;
 	}
-
 }
 
 .main-page-left-side-container {
@@ -315,6 +310,8 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	font-family: var(--body-font);
 	font-weight: 200;
 	font-size: var(--small-font-size);
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 @keyframes buttonGrow {
@@ -537,8 +534,6 @@ THIS IS FOR NEW FRONT PAGE
 	margin-top: 20px;
 }
 
-
-
 .front-page-section-donation-button-container {
 	margin-top: 52px;
 }
@@ -734,5 +729,9 @@ THIS IS FOR NEW FRONT PAGE
 		--large-font-size: 1.7rem;
 		--small-font-size: 0.8rem;
 	}
-	
+}
+
+.subpage_title_font_and_size {
+	font-size: calc(var(--large-font-size) * 2.5);
+	font-family: "Inter";
 }
