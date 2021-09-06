@@ -6,9 +6,6 @@ import { MainPageBlock, ArrowSVG } from "../components/MainPageBlock";
 import { useEffect } from "react";
 
 export default function Home() {
-	useEffect(() => {
-		alert("Please be aware, the website is currently under construction");
-	}, []);
 	return (
 		<>
 			<Head>
