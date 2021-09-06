@@ -3,8 +3,12 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { MainPageBlock2Props } from "../types/types";
 import { MainPageBlock, ArrowSVG } from "../components/MainPageBlock";
+import { useEffect } from "react";
 
 export default function Home() {
+	useEffect(() => {
+		alert("Please be aware, the website is currently under construction");
+	}, []);
 	return (
 		<>
 			<Head>
