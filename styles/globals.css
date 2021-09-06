@@ -145,17 +145,17 @@ THIS IS FOR THE NAVBAR
 
 .Navbar-Menu-Dropdown-Container {
 	position: absolute;
-	width: 85vw;
+	width: 100vw;
+	height: 100vh;
 	top: 0;
 	left: 0;
-
 	right: 0;
-	transform: translateX(-0%);
+
+	z-index: 100;
 	background-color: var(--primary-white);
 	border: var(--primary-border);
-	border-radius: var(--primary-padding);
+
 	padding: 1rem;
-	box-shadow: var(--box-shadow-standard);
 	/*  */
 	display: flex;
 	flex-direction: column;
@@ -179,6 +179,13 @@ THIS IS FOR THE NAVBAR
 @media (max-width: 920px) {
 	.Navbar-links {
 		display: none;
+	}
+	.Navbar-link {
+		margin-left: 0;
+		padding: 1rem;
+	}
+	.Navbar-link:hover {
+		background-color: whitesmoke;
 	}
 	.Navbar-Menu-Dropdown-Super-Container {
 		display: block;

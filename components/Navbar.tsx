@@ -60,7 +60,13 @@ const NavbarDropdown = () => {
 			></img>
 			{open && (
 				<div className='Navbar-Menu-Dropdown-Container'>
-					{" "}
+					<button
+						onClick={() => setOpen(false)}
+						style={{ textAlign: "center", alignItems: "center", display: "flex", justifyContent: "center" }}
+						className='front-page-section-donation-button'
+					>
+						<div>Close Menu</div>
+					</button>
 					<LinkList handleClose={setMenuClosed} />
 				</div>
 			)}
