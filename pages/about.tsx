@@ -25,7 +25,7 @@ const about = () => {
 								<MainPageBlock
 									containerID='firstMainPageBlock'
 									header='McGill University Chapter'
-									mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
+									mainText='It all started from a single club at mcgill, but then it blossomed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
 									imageSource='/McGillLogo.png'
 									imageAlt='Heal And Hope Logo'
 									imageID='McGillLogo'
@@ -41,7 +41,11 @@ const about = () => {
 							</div>
 							<div className={styles.MainBlockContainer}>
 								<PositionCard Name='Full Name' Position='VP External' />
-								<PositionCard Name='Full Name' Position='VP Finance & Funraising' />
+								<PositionCard
+									Name='Shayla Tran'
+									Position='VP Finance & Funraising'
+									ProfileImage='/VPFinanceAndFundraising.jpeg'
+								/>
 								<PositionCard Name='Full Name' Position='VP Communications' />
 								<PositionCard Name='Full Name' Position='President' />
 								<PositionCard Name='Full Name' Position='VP Internal' />
