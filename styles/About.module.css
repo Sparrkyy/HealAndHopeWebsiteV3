@@ -20,12 +20,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 40px;
+	margin-top: 20px;
 	flex-wrap: wrap;
 }
 
 .about_page_second_section {
-	min-height: 100vh;
+	min-height: 50vh;
 	padding: 1rem;
 	display: flex;
 	justify-content: center;

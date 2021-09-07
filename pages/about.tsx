@@ -36,6 +36,24 @@ const about = () => {
 					<section className={styles.about_page_second_section}>
 						<div className={styles.about_page_width_restriction_container}>
 							<div className={styles.pageTitleContainer}>
+								<h2 className={"subpage_title_font_and_size"}>Founders</h2>
+								<p className='front-page-section-caps-smaller-message'>Where it all started.</p>
+							</div>
+							<div className={styles.MainBlockContainer}>
+								<PositionCard
+									Name='Shayla Tran'
+									Position='VP Finance & Funraising'
+									ProfileImage='/VPFinanceAndFundraising.jpeg'
+								/>
+								<PositionCard Name='Full Name' Position='President' />
+								<PositionCard Name='Full Name' Position='VP Internal' />
+								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
+							</div>
+						</div>
+					</section>
+					<section className={styles.about_page_second_section}>
+						<div className={styles.about_page_width_restriction_container}>
+							<div className={styles.pageTitleContainer}>
 								<h2 className={"subpage_title_font_and_size"}>Our Team</h2>
 								<p className='front-page-section-caps-smaller-message'>Working Hard. Making It happen.</p>
 							</div>
