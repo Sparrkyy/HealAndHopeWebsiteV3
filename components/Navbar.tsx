@@ -18,11 +18,11 @@ const LinkList = ({ handleClose }: Props) => {
 					About
 				</div>
 			</Link>
-			<Link href='/thechildren'>
+			{/* <Link href='/thechildren'>
 				<div className='Navbar-link' onClick={handleClose}>
 					The Children
 				</div>
-			</Link>
+			</Link> */}
 			<Link href='/contact'>
 				<div className='Navbar-link' onClick={handleClose}>
 					Contact
