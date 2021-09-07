@@ -26,7 +26,7 @@ const about = () => {
 									containerID='firstMainPageBlock'
 									header='McGill University Chapter'
 									mainText='It all started from a single club at mcgill, but then it blousemed into something much bigger. We here at heal and hope strive to do important work the best we can. Across the globe.'
-									imageSource='/McgillLogo.png'
+									imageSource='/McGillLogo.png'
 									imageAlt='Heal And Hope Logo'
 									imageID='McGillLogo'
 								/>
