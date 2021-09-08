@@ -234,7 +234,6 @@ THIS IS FOR THE MAIN PAGE AND ITS PARTS
 	padding: 1rem 2rem;
 	justify-content: space-around;
 	align-items: center;
-	animation: 1s ease-out 0s 1 slideInFromLeft;
 	color: var(--primary-black);
 }
 
@@ -363,7 +362,6 @@ THIS IS FOR THE CARDS UNDERNEITH THE MAIN PAGE
 
 	padding: var(--primary-padding);
 	background-color: var(--primary-white);
-	animation: 1s ease-out 0s 1 slideInFromRight;
 	color: var(--primary-white);
 	display: flex;
 	flex-direction: column;
@@ -495,7 +493,6 @@ THIS IS FOR NEW FRONT PAGE
 	padding: 1rem 2rem;
 	justify-content: space-around;
 	align-items: center;
-	animation: 1s ease-out 0s 1 slideInFromLeft;
 	color: var(--primary-black);
 }
 
@@ -690,7 +687,6 @@ THIS IS FOR NEW FRONT PAGE
 	align-items: center;
 	margin-top: 40px;
 	flex-wrap: wrap;
-	animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
 .about_page_second_section {
