@@ -20,6 +20,7 @@
 
 .submitButton {
 	width: 17ch;
+	z-index: 0;
 }
 
 .label {

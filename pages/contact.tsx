@@ -77,7 +77,8 @@ const about = () => {
 									/>
 
 									<input
-										className={"front-page-section-donation-button " + stylesContact.submitButton}
+										className={"front-page-section-donation-button"}
+										style={{ zIndex: 0, width: "17ch", position: "unset" }}
 										type='submit'
 										value='Submit'
 									/>

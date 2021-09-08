@@ -59,7 +59,7 @@ const NavbarDropdown = () => {
 				onClick={() => setOpen(!open)}
 			></img>
 			{open && (
-				<div className='Navbar-Menu-Dropdown-Container'>
+				<div className='Navbar-Menu-Dropdown-Container' style={{ zIndex: 2 }}>
 					<button
 						onClick={() => setOpen(false)}
 						style={{ textAlign: "center", alignItems: "center", display: "flex", justifyContent: "center" }}
