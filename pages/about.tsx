@@ -45,7 +45,7 @@ const about = () => {
 									Position='VP Finance & Funraising'
 									ProfileImage='/VPFinanceAndFundraising.jpeg'
 								/>
-								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpeg' />
+								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
 								<PositionCard Name='Full Name' Position='VP Internal' />
 								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
 							</div>
@@ -64,7 +64,7 @@ const about = () => {
 									Position='VP Finance & Funraising'
 									ProfileImage='/VPFinanceAndFundraising.jpeg'
 								/>
-								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpeg' />
+								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
 								<PositionCard Name='Full Name' Position='President' />
 								<PositionCard Name='Full Name' Position='VP Internal' />
 								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
