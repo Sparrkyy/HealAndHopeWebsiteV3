@@ -40,14 +40,18 @@ const about = () => {
 								<p className='front-page-section-caps-smaller-message'>Where it all started.</p>
 							</div>
 							<div className={styles.MainBlockContainer}>
+								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
+								<PositionCard Name='Ghassan Ayoub' Position='Co-Founder' ProfileImage='/gusphoto.jpeg' />
 								<PositionCard
 									Name='Shayla Tran'
-									Position='VP Finance & Funraising'
+									Position='Chief Financial Officer'
 									ProfileImage='/VPFinanceAndFundraising.jpeg'
 								/>
-								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
-								<PositionCard Name='Full Name' Position='VP Internal' />
-								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
+								<PositionCard
+									Name='Ethan Hodges'
+									Position='Chief Operating Webmaster'
+									ProfileImage='/LinkedInProfile.jpeg'
+								/>
 							</div>
 						</div>
 					</section>
@@ -58,22 +62,16 @@ const about = () => {
 								<p className='front-page-section-caps-smaller-message'>Working Hard. Making It happen.</p>
 							</div>
 							<div className={styles.MainBlockContainer}>
-								<PositionCard Name='Full Name' Position='VP External' />
+								<PositionCard Name='Karma Hayek' Position='Co-President' ProfileImage='/KarmaPhoto.jpg' />
+								<PositionCard Name='Ghassan Ayoub' Position='Co-President' ProfileImage='/gusphoto.jpeg' />
+								<PositionCard Name='Lia Loebenberg' Position='VP Communications' ProfileImage='/liaphoto.jpeg' />
+								<PositionCard Name='Simone Geggie' Position='VP External' ProfileImage='/simonephoto.jpeg' />
 								<PositionCard
 									Name='Shayla Tran'
-									Position='VP Finance & Funraising'
+									Position='VP Finance & Fundraising'
 									ProfileImage='/VPFinanceAndFundraising.jpeg'
 								/>
-								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
-								<PositionCard Name='Full Name' Position='President' />
-								<PositionCard Name='Full Name' Position='VP Internal' />
 								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
-								<PositionCard Name='Full Name' Position='Secretary' />
-								<PositionCard Name='Full Name' Position='Internal Affairs Officer' />
-								<PositionCard Name='Full Name' Position='Media Coordinator' />
-								<PositionCard Name='Full Name' Position='Student Rep' />
-								<PositionCard Name='Full Name' Position='Fundraising Coordinator' />
-								<PositionCard Name='Full Name' Position='Finance Officer' />
 							</div>
 						</div>
 					</section>
@@ -90,7 +88,7 @@ const PositionCard: FC<{ Name: string; Position: string; ProfileImage?: string }
 }) => {
 	return (
 		<div className={styles.PositionCard}>
-			<img src={ProfileImage} alt='Profile Image' className={styles.PositionCardImage} />
+			<img src={ProfileImage} alt='Profile Image' className={styles.PositionCardImage} style={{ objectFit: "cover" }} />
 			<div className={styles.PositionCardText}>
 				<h3>{Name}</h3>
 				<p>{Position}</p>
