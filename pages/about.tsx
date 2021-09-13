@@ -40,8 +40,8 @@ const about = () => {
 								<p className='front-page-section-caps-smaller-message'>Where it all started.</p>
 							</div>
 							<div className={styles.MainBlockContainer}>
+								<PositionCard Name='Ghassan Ayoub' Position='Co-Founder' ProfileImage='/gusphoto.JPG' />
 								<PositionCard Name='Karma Hayek' Position='Co-Founder' ProfileImage='/KarmaPhoto.jpg' />
-								<PositionCard Name='Ghassan Ayoub' Position='Co-Founder' ProfileImage='/gusphoto.jpeg' />
 								<PositionCard
 									Name='Shayla Tran'
 									Position='Chief Financial Officer'
@@ -62,8 +62,8 @@ const about = () => {
 								<p className='front-page-section-caps-smaller-message'>Working Hard. Making It happen.</p>
 							</div>
 							<div className={styles.MainBlockContainer}>
+								<PositionCard Name='Ghassan Ayoub' Position='Co-President' ProfileImage='/gusphoto.JPG' />
 								<PositionCard Name='Karma Hayek' Position='Co-President' ProfileImage='/KarmaPhoto.jpg' />
-								<PositionCard Name='Ghassan Ayoub' Position='Co-President' ProfileImage='/gusphoto.jpeg' />
 								<PositionCard Name='Lia Loebenberg' Position='VP Communications' ProfileImage='/liaphoto.jpeg' />
 								<PositionCard Name='Simone Geggie' Position='VP External' ProfileImage='/simonephoto.jpeg' />
 								<PositionCard
