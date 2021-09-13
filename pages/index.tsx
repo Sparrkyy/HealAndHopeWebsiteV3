@@ -30,20 +30,20 @@ export default function Home() {
 					</div>
 					<div className='main-cards-container'>
 						<MainPageCard
-							titleText='Fundraising Goal:'
-							titleNumber='10,000$'
+							titleText='Monetary Contributions:'
+							titleNumber='$209,508'
 							imageSRC='/fundraising.png'
 							imageALT='fundraising hands'
 						/>
 						<MainPageCard
-							titleText='Funds raised:'
-							titleNumber='5,000$'
+							titleText='In-kind Contributions:'
+							titleNumber='$335,000'
 							imageSRC='/fundraisingHeart.png'
 							imageALT='fundraising heart'
 						/>
 						<MainPageCard
-							titleText='Surgeries Funded:'
-							titleNumber='43'
+							titleText='PPE Units Supplied:'
+							titleNumber='25,000'
 							imageSRC='/doctor.png'
 							imageALT='fundraising doctor'
 						/>
