@@ -71,7 +71,8 @@ const about = () => {
 									Position='VP Finance & Fundraising'
 									ProfileImage='/VPFinanceAndFundraising.jpeg'
 								/>
-								<PositionCard Name='Ethan Hodges' Position='VP Media' ProfileImage='/LinkedInProfile.jpeg' />
+								<PositionCard Name='Sarah Beydoun' Position='VP Media' ProfileImage='/SarahBeydoun.png' />
+								<PositionCard Name='Lynne Aouad' Position='VP Internal' ProfileImage={undefined} />
 							</div>
 						</div>
 					</section>
