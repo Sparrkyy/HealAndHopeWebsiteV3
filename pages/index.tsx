@@ -23,7 +23,7 @@ export default function Home() {
 							header='Student Organization. Global Impact.'
 							mainText='Giving children a second chance at life'
 							buttonText='Donate Here'
-							imageSource='/Logo.png'
+							imageSource='/logo2.png'
 							imageAlt='Heal And Hope Logo'
 							buttonHREF='/'
 						/>
